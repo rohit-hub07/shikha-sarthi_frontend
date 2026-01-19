@@ -32,44 +32,598 @@
     "api": "/api/courses"
   },
   "design2": {
-    "title": "About Us",
+    "title": "Wardrobe Designs",
     "description": "We build education for everyone",
-    "img": "dish.png",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen3.jpg",
+      "shortDesc": "Ideal for narrow spaces with a practical two-wall layout.",
+      "size": "10x10 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen4.jpg",
+      "shortDesc": "Contemporary open kitchen blending living and cooking spaces.",
+      "size": "10x8 feet"
+    }
+    ],
     "api": "/api/about"
   },
   "design3": {
-    "title": "Contact Us",
+    "title": "Bathroom Designs",
     "description": "Get in touch with us",
-    "img": "xys.jpg",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
     "api": "/api/contact"
   },
   "design4": {
-    "title": "Dipu Page",
-    "description": "Personal information page",
-    "img": "saf.png",
-    "api": "/api/design4"
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
   },
   "design5": {
-    "title": "Welcome to Shiksha Sarthi",
-    "description": "Learn skills for the future",
-    "img": "dipu.png"
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
   },
   "design6": {
-    "title": "About Us",
-    "description": "We build education for everyone",
-    "img": "dish.png",
-    "api": "/api/about"
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
   },
   "design7": {
-    "title": "Contact Us",
+    "title": "Bathroom Designs",
     "description": "Get in touch with us",
-    "img": "xys.jpg",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
     "api": "/api/contact"
   },
   "design8": {
-    "title": "Dipu Page",
-    "description": "Personal information page",
-    "img": "saf.png",
-    "api": "/api/about"
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design9": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design10": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design11": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design12": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design13": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design14": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design15": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design16": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design17": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design18": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design19": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design20": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design21": {
+    "title": "Tile Designs",
+    "description": "Get in touch tile designs",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design22": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design23": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design24": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design25": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design26": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design27": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
+  },
+  "design28": {
+    "title": "Bathroom Designs",
+    "description": "Get in touch with us",
+    "images": [
+      {
+      "src": "/colours-kitchen-img/colours-kitchen.jpg",
+      "shortDesc": "A sleek modern modular kitchen with smart storage and clean finishes.",
+      "size": "10x8 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen1.jpg",
+      "shortDesc": "Perfect for compact homes with efficient corner utilisation.",
+      "size": "10x6 feet"
+    },
+    {
+      "src": "/colours-kitchen-img/colours-kitchen2.jpg",
+      "shortDesc": "Maximises workspace and storage for larger kitchens.",
+      "size": "12x8 feet"
+    }
+    ],
+    "api": "/api/contact"
   }
+  
 }

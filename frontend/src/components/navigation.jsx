@@ -98,44 +98,305 @@ const Navigation = ({ onQuoteClick }) => {
 
                 <ul className="dropdown-menu">
                   <li>
-                    <Link to="/secondFront/modularKitchen"
-                    className="dropdown-item">
+                    <Link
+                      to="/secondFront/modularKitchen"
+                      className="dropdown-item"
+                    >
                       Modular Kitchen Designs
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/bedroom">
-                      Bedroom Designs
+                    <Link className="dropdown-item" to="/secondFront/wardrobe">
+                      Wardrobe Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/bathroom"
+                    >
+                      Bathroom Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/masterBedroom">
+                      Master Bedroom Designs
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/secondFront/livingroom">
-                      Livingroom Designs
+                      Living Room Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/poojaroom">
+                      Pooja Room Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/tvUnit">
+                      TV Unit Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/falseCelling">
+                      False Ceiling Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/kidsBedroom">
+                      Kids Bedroom Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/balcony">
+                      Balcony Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/diningRoom">
+                      Dining Room Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/foyer">
+                      Foyer Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/homesByLivspace">
+                      Homes by Livspace
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/homeOffice">
+                      Home Office Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/guestBedroom">
+                      Guest Bedroom Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/window">
+                      Window Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/flooring">
+                      Flooring Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/wallDecor">
+                      Wall Decor Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/wallPaint">
+                      Wall Paint Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/homeWallpaper">
+                      Home Wallpaper Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/tile">
+                      Tile Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/studyroom">
+                      Study Room Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/kitchenSinks">
+                      Kitchen Sinks
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/spaceSavingDesign">
+                      Space Saving Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/door">
+                      Door Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/staircase">
+                      Staircase Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/crockeryUnit">
+                      Crockery Unit Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/homeBar">
+                      Home Bar Designs
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-item dropdown d-flex align-items-center">
+                {/* TEXT → PAGE NAVIGATION */}
+                <Link className="nav-link" to="/">
+                  Magazine
+                </Link>
+
+                {/* ARROW → DROPDOWN */}
+                <button
+                  className="nav-link dropdown-toggle btn btn-link p-0 ms-1"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                />
+
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link
+                      to="/secondFront/modularKitchen"
+                      className="dropdown-item"
+                    >
+                      Room Ideas
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/bedroom">
+                      Decor & Inspiration
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/livingroom"
+                    >
+                      Ceiling Designs
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" href="#">
-                      Design Ideas 4
+                      Furniture Ideas
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" href="#">
-                      Designs Ideas 5
+                      Home Decor
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" href="#">
-                      Designs Ideas 6
+                      Lighting Ideas
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" href="#">
-                      Designs Ideas 7
+                      Wall Design Ideas
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" href="#">
-                      Designs Ideas 8
+                      Expert Advice
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Interior Advice
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Vastu Tips
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Home Organisation
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Materials Guide
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Home Renovation Ideas
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Commercial Interiors
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-item dropdown d-flex align-items-center">
+                {/* TEXT → PAGE NAVIGATION */}
+                <Link className="nav-link" to="/">
+                  Cities
+                </Link>
+
+                {/* ARROW → DROPDOWN */}
+                <button
+                  className="nav-link dropdown-toggle btn btn-link p-0 ms-1"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                />
+
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link
+                      to="/secondFront/modularKitchen"
+                      className="dropdown-item"
+                    >
+                      Saran
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/bedroom">
+                      Patna
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/livingroom"
+                    >
+                      Vijayawada
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Kanpur
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Goa
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Dehradun
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Agra
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Surat
                     </Link>
                   </li>
                 </ul>

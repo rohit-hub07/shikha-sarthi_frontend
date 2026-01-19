@@ -23,8 +23,33 @@ const SecondFront = () => {
   // Decide API based on button clicked
   const apiMap = {
     modularKitchen: "design1",
-    bedroom: "design5",
-    livingroom: "design6",
+    wardrobe: "design2",
+    bathroom: "design3",
+    masterBedroom: "design4",
+    livingroom: "design5",
+    poojaroom: "design6",
+    tvUnit: "design7",
+    falseCelling: "design8",
+    kidsBedroom: "design9",
+    balcony: "design10",
+    diningRoom: "design11",
+    foyer: "design12",
+    homesByLivspace: "design13",
+    homeOffice: "design14",
+    guestBedroom: "design15",
+    window: "design16",
+    flooring: "design17",
+    wallDecor: "design18",
+    wallPaint: "design19",
+    homeWallpaper: "design20",
+    tile: "design21",
+    studyroom: "design22",
+    kitchenSinks: "design23",
+    spaceSavingDesign: "design24",
+    door: "design25",
+    staircase: "design26",
+    crockeryUnit: "design27",
+    homeBar: "design28"
   };
 
   const pageKey = apiMap[designType];
