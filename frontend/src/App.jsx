@@ -1,24 +1,25 @@
-
-import { Link, Routes, Route, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { Link, Routes, Route, useNavigate } from "react-router-dom";
+import { useState } from "react";
 // import Home from './home/Home'
-import Upload from './pages/Upload'
+import Upload from "./pages/Upload";
 // import Login from './pages/Login'
 // import Register from './pages/Register'
-import { getUser, clearAuth, getToken } from './lib/auth'
+import { getUser, clearAuth, getToken } from "./lib/auth";
 // import './App.css'
 
-import Front from './components/front'
-import Navigation from './components/navigation'
-import Footer from './components/footer'
+import Front from "./components/front";
+import SecondFront from "./components/secondFront";
+import Navigation from "./components/navigation";
+import Footer from "./components/footer";
 import ConsultationForm from "./components/consultationForm.jsx";
 
-const API = import.meta.env.VITE_API_URL || 'https://react-shiksak-sarthi-d.vercel.app'
+const API =
+  import.meta.env.VITE_API_URL || "https://react-shiksak-sarthi-d.vercel.app";
 
 function App() {
-  const [user, setUser] = useState(getUser())
-  const navigate = useNavigate()
-  
+  const [user, setUser] = useState(getUser());
+  const navigate = useNavigate();
+
   // POPUP STATE
   const [showPopup, setShowPopup] = useState(false);
 
@@ -28,20 +29,21 @@ function App() {
 
   async function handleLogout() {
     try {
-      const token = getToken()
+      const token = getToken();
       if (token) {
-        await fetch(`${API}/api/auth/logout`, { // || 'http://localhost:5173'}/api/auth/logout, {
-          method: 'POST',
-          headers: { Authorization: `Bearer ${token}` }
-        })
+        await fetch(`${API}/api/auth/logout`, {
+          // || 'http://localhost:5173'}/api/auth/logout, {
+          method: "POST",
+          headers: { Authorization: `Bearer ${token}` },
+        });
       }
     } catch (err) {
       // ignore logout network errors
-      console.error('Logout error', err)
+      console.error("Logout error", err);
     }
-    clearAuth()
-    setUser(null)
-    navigate('/')
+    clearAuth();
+    setUser(null);
+    navigate("/");
   }
 
   return (
@@ -73,6 +75,7 @@ function App() {
           {/* <Route path="/" element={<Home />} /> */}
           <Route path="/upload" element={<Upload />} />
           <Route path="/" element={<Front />} />
+          <Route path="/secondFront/:designType" element={<SecondFront />} />
           {/* <Route path="/login" element={<Login onLogin={(u) => setUser(u)} />} />
           <Route path="/register" element={<Register onRegister={(u) => setUser(u)} />} /> */}
         </Routes>
@@ -88,13 +91,16 @@ function App() {
             className="bg-white p-4 rounded shadow"
             style={{ width: "90%", paddingTop: "90px", maxWidth: "600px" }}
           >
-            <button className="btn-close float-end" onClick={closePopup}></button>
+            <button
+              className="btn-close float-end"
+              onClick={closePopup}
+            ></button>
             <ConsultationForm onSuccess={closePopup} />
           </div>
         </div>
       )}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

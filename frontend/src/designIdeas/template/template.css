@@ -1,0 +1,17 @@
+.section-heading {
+  position: relative;
+  padding-left: 14px;          /* space for red line */
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.section-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 4px;
+  background-color: red;
+  border-radius: 2px;
+}

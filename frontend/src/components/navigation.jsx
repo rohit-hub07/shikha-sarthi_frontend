@@ -66,6 +66,80 @@ const Navigation = ({ onQuoteClick }) => {
                   HOME
                 </Link>
               </li>
+              {/* <li className="nav-item dropdown">
+                <Link
+                  className="nav-link dropdown-toggle"
+                  to="/secondFront"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Design Ideas
+                </Link>
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/modularKitchen">
+                      Modular Kitchen Designs
+                    </Link>
+                  </li> */}
+              <li className="nav-item dropdown d-flex align-items-center">
+                {/* TEXT → PAGE NAVIGATION */}
+                <Link className="nav-link" to="/">
+                  Design Ideas
+                </Link>
+
+                {/* ARROW → DROPDOWN */}
+                <button
+                  className="nav-link dropdown-toggle btn btn-link p-0 ms-1"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                />
+
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link to="/secondFront/modularKitchen"
+                    className="dropdown-item">
+                      Modular Kitchen Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/bedroom">
+                      Bedroom Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/livingroom">
+                      Livingroom Designs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Design Ideas 4
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Designs Ideas 5
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Designs Ideas 6
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Designs Ideas 7
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" href="#">
+                      Designs Ideas 8
+                    </Link>
+                  </li>
+                </ul>
+              </li>
 
               <li className="nav-item">
                 <Link className="nav-link" to="/about">
@@ -141,6 +215,59 @@ const Navigation = ({ onQuoteClick }) => {
               <Link className="nav-link" to="/" data-bs-dismiss="offcanvas">
                 HOME
               </Link>
+            </li>
+            <li className="nav-item dropdown">
+              <Link
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Design Ideas
+              </Link>
+              <ul className="dropdown-menu">
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Modular Kitchen Designs
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Bedroom Designs
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Livingroom Designs
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Design Ideas 4
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 5
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 6
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 7
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 8
+                  </Link>
+                </li>
+              </ul>
             </li>
 
             <li className="nav-item">
