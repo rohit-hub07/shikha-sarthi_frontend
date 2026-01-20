@@ -111,20 +111,23 @@ const Navigation = ({ onQuoteClick }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      className="dropdown-item"
-                      to="/secondFront/bathroom"
-                    >
+                    <Link className="dropdown-item" to="/secondFront/bathroom">
                       Bathroom Designs
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/masterBedroom">
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/masterBedroom"
+                    >
                       Master Bedroom Designs
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/livingroom">
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/livingroom"
+                    >
                       Living Room Designs
                     </Link>
                   </li>
@@ -139,12 +142,18 @@ const Navigation = ({ onQuoteClick }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/falseCelling">
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/falseCelling"
+                    >
                       False Ceiling Designs
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/kidsBedroom">
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/kidsBedroom"
+                    >
                       Kids Bedroom Designs
                     </Link>
                   </li>
@@ -154,7 +163,10 @@ const Navigation = ({ onQuoteClick }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/diningRoom">
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/diningRoom"
+                    >
                       Dining Room Designs
                     </Link>
                   </li>
@@ -164,17 +176,26 @@ const Navigation = ({ onQuoteClick }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/homesByLivspace">
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/homesByLivspace"
+                    >
                       Homes by Livspace
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/homeOffice">
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/homeOffice"
+                    >
                       Home Office Designs
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/guestBedroom">
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/guestBedroom"
+                    >
                       Guest Bedroom Designs
                     </Link>
                   </li>
@@ -199,7 +220,10 @@ const Navigation = ({ onQuoteClick }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/homeWallpaper">
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/homeWallpaper"
+                    >
                       Home Wallpaper Designs
                     </Link>
                   </li>
@@ -214,12 +238,18 @@ const Navigation = ({ onQuoteClick }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/kitchenSinks">
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/kitchenSinks"
+                    >
                       Kitchen Sinks
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/spaceSavingDesign">
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/spaceSavingDesign"
+                    >
                       Space Saving Designs
                     </Link>
                   </li>
@@ -234,7 +264,10 @@ const Navigation = ({ onQuoteClick }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/crockeryUnit">
+                    <Link
+                      className="dropdown-item"
+                      to="/secondFront/crockeryUnit"
+                    >
                       Crockery Unit Designs
                     </Link>
                   </li>
@@ -354,15 +387,12 @@ const Navigation = ({ onQuoteClick }) => {
 
                 <ul className="dropdown-menu">
                   <li>
-                    <Link
-                      to="/secondFront/modularKitchen"
-                      className="dropdown-item"
-                    >
+                    <Link to="/secondFront/saran" className="dropdown-item">
                       Saran
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/bedroom">
+                    <Link className="dropdown-item" to="/secondFront/patna">
                       Patna
                     </Link>
                   </li>

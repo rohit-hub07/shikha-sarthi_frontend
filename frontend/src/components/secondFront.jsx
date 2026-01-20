@@ -16,6 +16,7 @@
 
 import { useParams } from "react-router-dom";
 import Template from "../designIdeas/template/designIdeas";
+import TemplateForCities from "../designIdeas/template/templateForCities";
 
 const SecondFront = () => {
   const { designType } = useParams();
@@ -52,23 +53,48 @@ const SecondFront = () => {
     homeBar: "design28"
   };
 
-  const pageKey = apiMap[designType];
-
-  // Safety check
-  if (!pageKey) {
-    return (
-      <div style={{ padding: "2rem", textAlign: "center" }}>
-        <h2>Design not found</h2>
-        <p>Please select a valid design.</p>
-      </div>
-    );
+  const cityMap = {
+    saran: "city1",
+    patna: "city2",
   }
 
+  const pageKey = apiMap[designType];
+  const cityKey = cityMap[designType];
+
+  // Safety check
+  // if (!pageKey) {
+  //   return (
+  //     <div style={{ padding: "2rem", textAlign: "center" }}>
+  //       <h2>Design not found</h2>
+  //       <p>Please select a valid design.</p>
+  //     </div>
+  //   );
+  // }
+
+  // return (
+  //   <div>
+  //     <Template pageKey={pageKey} />
+  //     <TemplateForCities pageKey={cityKey} />
+  //   </div>
+  // );
+
+  // DESIGN PAGE
+  if (pageKey) {
+    return <Template pageKey={pageKey} />;
+  }
+
+  // CITY PAGE
+  if (cityKey) {
+    return <TemplateForCities cityKey={cityKey} />;
+  }
+
+  // INVALID ROUTE
   return (
-    <div>
-      <Template pageKey={pageKey} />
+    <div style={{ padding: "2rem", textAlign: "center" }}>
+      <h2>Page not found</h2>
     </div>
   );
+
 };
 
 export default SecondFront;
