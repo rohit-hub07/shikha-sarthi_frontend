@@ -55,48 +55,6 @@ const Template = ({ pageKey }) => {
           </button>
         )}
       </div>
-
-      {/* <img
-        src={config.img}
-        alt={config.title}
-        width="300"
-      /> */}
-
-      {/* IMAGE SECTION (supports single & multiple images) */}
-      {/* <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-        {config.images?.length ? (
-          config.images.map((img, index) => (
-            <img
-              key={index}
-              src={img}
-              alt={`${config.title} ${index + 1}`}
-              width="300"
-              loading="lazy"
-            />
-          ))
-        ) : config.img ? (
-          <img src={config.img} alt={config.title} width="300" loading="lazy" />
-        ) : null}
-      </div> */}
-      {/* <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-        {Array.isArray(config.images) &&
-          config.images.map((item, index) => (
-            <div key={index} style={{ width: "300px" }}>
-              <img
-                src={item.src}
-                alt={item.title}
-                width="100%"
-                loading="lazy"
-              /> */}
-
-      {/* <h6 className="mt-2 mb-1">{item.title}</h6> */}
-      {/* <p className="mb-1">{item.shortDesc}</p>
-              <p className="mb-1">Size: {item.size}</p>
-
-            </div>
-          ))}
-      </div> */}
-
       <div className="row g-4 mt-3">
         {Array.isArray(config.images) &&
           config.images.map((item, index) => (
@@ -160,9 +118,6 @@ const Template = ({ pageKey }) => {
           ))}
         </div>
       )}
-      {/* BUTTONS */}
-      {/* <div><button className="btn btn-primary">Primary</button></div>
-      <div><button className="btn btn-secondary">Secondary</button></div> */}
     </section>
   );
 };
