@@ -2,8 +2,18 @@ import { useEffect, useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import pageConfig from "../data/city.json";
 import { fetchData } from "../api/api";
-
 import "./template.css";
+
+import Banner from "../componentsForCity/banner";
+import City1 from "../componentsForCity/city1";
+import City2 from "../componentsForCity/city2";
+import City3 from "../componentsForCity/city3";
+import City4 from "../componentsForCity/city4";
+import City5 from "../componentsForCity/city5";
+import City6 from "../componentsForCity/city6";
+import City7 from "../componentsForCity/city7";
+import City8 from "../componentsForCity/city8";
+import City9 from "../componentsForCity/city9";
 
 const Template = ({ cityKey }) => {
   const config = pageConfig[cityKey];
@@ -28,10 +38,22 @@ const Template = ({ cityKey }) => {
 
   return (
     <section>
-      <p className="text-body-secondary">Showing {imageCount} Results for</p>
-      <h1 className="section-heading">{config.title}</h1>
+      <Banner cityName={config.cityName} />
+      <div style={{ marginTop: "40px", marginBottom: "20px" }}>
+        <City1 cityName={config.cityName} />
+      </div>
+      <City2 />
+      <City3 />
+      <City4 />
+      <City5 />
+      <City6 />
+      <City7 />
+      <City8 />
+      <City9 />
+      {/* <p className="text-body-secondary">Showing {imageCount} Results for</p> */}
+      {/* <h1 className="section-heading">{config.title}</h1> */}
       {/* <p>{config.description}</p> */}
-      <div>
+      {/* <div>
         <p>
           {showFullDesc || config.description.length <= DESC_LIMIT
             ? config.description
@@ -54,7 +76,7 @@ const Template = ({ cityKey }) => {
             )}
           </button>
         )}
-      </div>
+      </div> */}
       <div className="row g-4 mt-3">
         {Array.isArray(config.images) &&
           config.images.map((item, index) => (
