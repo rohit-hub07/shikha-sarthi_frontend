@@ -225,6 +225,13 @@ const EPaper = () => {
                       >
                         📄 View PDF
                       </a>
+                      <a
+                        href={existingPaper.pdfUrl}
+                        download={`EPaper_${month.name}_${selectedYear}.pdf`}
+                        className="btn btn-outline-success btn-sm w-100 mb-2"
+                      >
+                        ⬇️ Download PDF
+                      </a>
 
                       {user && (
                         <div className="mt-3 pt-3 border-top">
