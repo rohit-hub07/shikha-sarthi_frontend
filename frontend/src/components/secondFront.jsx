@@ -56,6 +56,12 @@ const SecondFront = () => {
   const cityMap = {
     saran: "city1",
     patna: "city2",
+    vijyawada: "city3",
+    kanpur: "city4",
+    goa: "city5",
+    dehradun: "city6",
+    agra: "city7",
+    surat: "city8"
   }
 
   const pageKey = apiMap[designType];

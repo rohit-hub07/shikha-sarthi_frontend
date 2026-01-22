@@ -399,18 +399,18 @@ const Navigation = ({ onQuoteClick }) => {
                   <li>
                     <Link
                       className="dropdown-item"
-                      to="/secondFront/livingroom"
+                      to="/secondFront/vijayawada"
                     >
                       Vijayawada
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/secondFront/kanpur">
                       Kanpur
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/secondFront/goa">
                       Goa
                     </Link>
                   </li>
@@ -420,12 +420,17 @@ const Navigation = ({ onQuoteClick }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/secondFront/dehradun">
+                      Dehradun
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/agra">
                       Agra
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/secondFront/surat">
                       Surat
                     </Link>
                   </li>
