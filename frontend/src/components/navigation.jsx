@@ -565,6 +565,112 @@ const Navigation = ({ onQuoteClick }) => {
                 </li>
               </ul>
             </li>
+            <li className="nav-item dropdown">
+              <Link
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Magazine
+              </Link>
+              <ul className="dropdown-menu">
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Modular Kitchen Designs
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Bedroom Designs
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Livingroom Designs
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Design Ideas 4
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 5
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 6
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 7
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 8
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="nav-item dropdown">
+              <Link
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Cities
+              </Link>
+              <ul className="dropdown-menu">
+                <li>
+                  <Link className="dropdown-item" to="/secondFront/saran">
+                    Saran
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Bedroom Designs
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Livingroom Designs
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Design Ideas 4
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 5
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 6
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 7
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 8
+                  </Link>
+                </li>
+              </ul>
+            </li>
 
             <li className="nav-item">
               <Link
