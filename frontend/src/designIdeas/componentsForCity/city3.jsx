@@ -2,7 +2,7 @@ import React from 'react'
 
 const City3 = () => {
   return (
-    <div className="pb-5 mb-2">
+    <div className="container text-start pb-5 mb-2">
       <h2>Bought a new home?</h2>
       <p>
         Get interiors that your family members and friends would love. Our
