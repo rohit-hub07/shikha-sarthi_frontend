@@ -139,7 +139,7 @@ const Painting = () => {
         const isEditing = editingPostId === post._id;
 
         return (
-          <div key={post._id} className={index > 0 ? "mt-5 pt-4 border-top" : ""}>
+          <div key={post._id} className={index > 0 ? "mt-5 pt-4" : ""}>
             {/* Edit button */}
             {user && !isEditing && (
               <button
