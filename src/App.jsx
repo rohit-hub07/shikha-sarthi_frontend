@@ -12,6 +12,7 @@ import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import Health from './pages/Health.jsx';
 import EPaper from './pages/EPaper.jsx';
+import CreatePost from './pages/CreatePost.jsx';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/epaper" element={<EPaper />} />
+          <Route path="/create-post" element={<CreatePost />} />
         </Routes>
         <Toaster
           position="top-center"

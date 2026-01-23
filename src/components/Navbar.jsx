@@ -16,13 +16,13 @@ const NavBar = () => {
   const { user, setUser } = useAuth();
 
   // const getAdminAccess = () => {
-    
+
   // };
-  
+
   const increaseCount = () => {
-    setCount(prev => prev+1);
-    console.log("count: ",count);
-    if(count >= 10){
+    setCount(prev => prev + 1);
+    console.log("count: ", count);
+    if (count >= 10) {
       setUser(user ? false : true);
       setCount(1);
     }
@@ -85,6 +85,14 @@ const NavBar = () => {
                 E-Paper
               </Link>
             </li>
+
+            {user && (
+              <li className="nav-item">
+                <Link className="nav-link btn btn-light text-primary fw-bold text-white ms-2" to="/create-post">
+                  + Create Post
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>
