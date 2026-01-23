@@ -7,6 +7,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { useAuth } from "../context/userContext";
+import toast from "react-hot-toast";
 
 // default data
 const defaultData = {

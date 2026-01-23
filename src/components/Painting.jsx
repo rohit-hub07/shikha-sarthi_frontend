@@ -15,9 +15,9 @@ const defaultData =
 
 
 const Painting = () => {
-  const [postDetail, setPostDetail] = useState(defaultData)
-  const [isEditing, setIsEditing] = useState(false);
-  // const [user, setUser] = useState(true);
+  const [posts, setPosts] = useState([])
+  const [editingPostId, setEditingPostId] = useState(null);
+  const [editFormData, setEditFormData] = useState({});
   const [uploading, setUploading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -35,21 +35,7 @@ const Painting = () => {
         const data = await response.json();
 
         if (data.success && data.posts && data.posts.length > 0) {
-          // Get the most recent post (first one since we sort by createdAt desc)
-          const latestPost = data.posts[0];
-          setPostDetail({
-            title: latestPost.title,
-            description: latestPost.description,
-            imageUrl: latestPost.imageUrl,
-            createdAt: new Date(latestPost.createdAt).toLocaleString('en-IN', {
-              day: 'numeric',
-              month: 'short',
-              hour: 'numeric',
-              minute: 'numeric',
-              hour12: true,
-              year: 'numeric'
-            })
-          });
+          setPosts(data.posts);
         }
       } catch (error) {
         console.error("Error fetching post:", error);
@@ -61,9 +47,22 @@ const Painting = () => {
     fetchPost();
   }, [backend_url]);
 
-  const handleImageUpload = async (e) => {
+  const startEdit = (post) => {
+    setEditingPostId(post._id);
+    setEditFormData({
+      title: post.title,
+      description: post.description,
+      imageUrl: post.imageUrl
+    });
+  };
+
+  const cancelEdit = () => {
+    setEditingPostId(null);
+    setEditFormData({});
+  };
+
+  const handleImageUpload = async (e, postId) => {
     const file = e.target.files[0];
-    console.log("file: ", file)
     if (!file) return;
 
     const formData = new FormData();
@@ -79,7 +78,8 @@ const Painting = () => {
       const data = await response.json();
 
       if (data.success) {
-        setPostDetail({ ...postDetail, imageUrl: data.mediaUrl });
+        setEditFormData(prev => ({ ...prev, imageUrl: data.mediaUrl }));
+        toast.success("Image uploaded successfully!");
       } else {
         toast.error("Failed to upload image: " + data.message);
       }
@@ -91,7 +91,7 @@ const Painting = () => {
     }
   };
 
-  const handleSave = async () => {
+  const handleSave = async (postId) => {
     try {
       setSaving(true);
       const response = await fetch(`${backend_url}/api/posts/create`, {
@@ -100,30 +100,23 @@ const Painting = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          title: postDetail.title,
-          description: postDetail.description,
-          imageUrl: postDetail.imageUrl,
+          ...editFormData,
           category: 'painting',
         }),
       });
 
       const data = await response.json();
-      console.log("data: ", data);
+
       if (data.success) {
-        // Update createdAt with the newly saved post's timestamp
-        setPostDetail({
-          ...postDetail,
-          createdAt: new Date(data.post.createdAt).toLocaleString('en-IN', {
-            day: 'numeric',
-            month: 'short',
-            hour: 'numeric',
-            minute: 'numeric',
-            hour12: true,
-            year: 'numeric'
-          })
-        });
         toast.success("Post updated successfully!");
-        setIsEditing(false);
+        setEditingPostId(null);
+        setEditFormData({});
+        // Refresh posts
+        const fetchResponse = await fetch(`${backend_url}/api/posts?category=painting`);
+        const fetchData = await fetchResponse.json();
+        if (fetchData.success) {
+          setPosts(fetchData.posts);
+        }
       } else {
         toast.error("Failed to update post: " + data.message);
       }
@@ -135,106 +128,126 @@ const Painting = () => {
     }
   };
 
-  const handleCancel = () => {
-    setIsEditing(false);
-  };
-
   if (loading) {
     return <div>Loading...</div>;
   }
 
   return (
     <div className="mb-4">
-      {user && !isEditing && (
-        <button onClick={() => setIsEditing(true)} className="bg-blue-400 rounded-md h-5 w-20 p-px content-center text-center mb-3">Edit</button>
-      )}
+      {/* Display all posts in zig-zag layout */}
+      {posts.map((post, index) => {
+        const isEditing = editingPostId === post._id;
 
-      {isEditing && (
-        <div className="mb-3 d-flex gap-2">
-          <button
-            onClick={handleSave}
-            disabled={saving || uploading}
-            className="bg-blue-400 rounded-md h-5 w-20 p-px content-center text-center"
-          >
-            {saving ? "Saving..." : "Save"}
-          </button>
-          <button
-            onClick={handleCancel}
-            disabled={saving || uploading}
-            className="bg-blue-400 rounded-md h-5 w-20 p-px content-center text-center"
-          >
-            Cancel
-          </button>
-        </div>
-      )}
-
-      <div className="row g-3">
-        <div className="col-12 col-md-6 col-lg-5">
-          <img
-            src={postDetail.imageUrl}
-            alt="Painting"
-            className="painting-img rounded img-fluid w-100"
-            style={{ height: "auto", maxHeight: "50vh", objectFit: "cover" }}
-          />
-          {isEditing && (
-            <div className="mt-2">
-              <input
-                type="file"
-                ref={fileInputRef}
-                onChange={handleImageUpload}
-                accept="image/*"
-                style={{ display: 'none' }}
-              />
+        return (
+          <div key={post._id} className={index > 0 ? "mt-5 pt-4 border-top" : ""}>
+            {/* Edit button */}
+            {user && !isEditing && (
               <button
-                onClick={() => fileInputRef.current?.click()}
-                disabled={uploading}
-                className="bg-blue-400 rounded-md h-5 w-20 p-px content-center text-center"
+                onClick={() => startEdit(post)}
+                className="bg-blue-400 rounded-md h-5 w-20 p-px content-center text-center mb-3"
               >
-                {uploading ? "Uploading..." : "Change Image"}
+                Edit
               </button>
+            )}
+
+            {isEditing && (
+              <div className="mb-3 d-flex gap-2">
+                <button
+                  onClick={() => handleSave(post._id)}
+                  disabled={saving || uploading}
+                  className="bg-blue-400 rounded-md h-5 w-20 p-px content-center text-center"
+                >
+                  {saving ? "Saving..." : "Save"}
+                </button>
+                <button
+                  onClick={cancelEdit}
+                  disabled={saving || uploading}
+                  className="bg-blue-400 rounded-md h-5 w-20 p-px content-center text-center"
+                >
+                  Cancel
+                </button>
+              </div>
+            )}
+
+            <div className="row g-3">
+              {/* Image - alternates left/right */}
+              <div className={`col-12 col-md-6 col-lg-5 ${index % 2 === 0 ? '' : 'order-md-2 order-1'}`}>
+                <img
+                  src={isEditing ? editFormData.imageUrl : post.imageUrl}
+                  alt={post.title}
+                  className="painting-img rounded img-fluid w-100"
+                  style={{ height: "auto", maxHeight: "50vh", objectFit: "cover" }}
+                />
+                {isEditing && (
+                  <div className="mt-2">
+                    <input
+                      type="file"
+                      ref={fileInputRef}
+                      onChange={(e) => handleImageUpload(e, post._id)}
+                      accept="image/*"
+                      style={{ display: 'none' }}
+                    />
+                    <button
+                      onClick={() => fileInputRef.current?.click()}
+                      disabled={uploading}
+                      className="bg-blue-400 rounded-md h-5 w-20 p-px content-center text-center"
+                    >
+                      {uploading ? "Uploading..." : "Change Image"}
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              {/* Text content */}
+              <div className={`col-12 col-md-6 col-lg-7 ${index % 2 === 0 ? '' : 'order-md-1 order-2'}`}>
+                {isEditing ? (
+                  <input
+                    type="text"
+                    value={editFormData.title}
+                    onChange={(e) => setEditFormData({ ...editFormData, title: e.target.value })}
+                    className="form-control mb-2"
+                  />
+                ) : (
+                  <h2 className="h3 h-md-2">{post.title}</h2>
+                )}
+
+                {isEditing ? (
+                  <textarea
+                    value={editFormData.description}
+                    onChange={(e) => setEditFormData({ ...editFormData, description: e.target.value })}
+                    rows={6}
+                    className="form-control mb-2"
+                  />
+                ) : (
+                  <p className="text-justify">{post.description}</p>
+                )}
+
+                <div className="mt-3">
+                  <p className="mb-2">
+                    <FaCalendar />
+                    &nbsp; {new Date(post.createdAt).toLocaleString('en-IN', {
+                      day: 'numeric',
+                      month: 'short',
+                      hour: 'numeric',
+                      minute: 'numeric',
+                      hour12: true,
+                      year: 'numeric'
+                    })}
+                  </p>
+                </div>
+                <div>
+                  <p className="d-flex gap-2 flex-wrap">
+                    <FaFacebook />
+                    <FaInstagram />
+                    <FaLinkedin />
+                    <FaWhatsapp />
+                  </p>
+                </div>
+              </div>
             </div>
-          )}
-        </div>
-
-        <div className="col-12 col-md-6 col-lg-7">
-          {isEditing ? (
-            <input
-              type="text"
-              value={postDetail.title}
-              onChange={(e) => setPostDetail({ ...postDetail, title: e.target.value })}
-              className="form-control mb-2"
-            />
-          ) : (
-            <h2 className="h3 h-md-2">{postDetail.title}</h2>
-          )}
-
-          {isEditing ? (
-            <textarea
-              value={postDetail.description}
-              onChange={(e) => setPostDetail({ ...postDetail, description: e.target.value })}
-              rows={6}
-              className="form-control mb-2"
-            />
-          ) : (
-            <p className="text-justify">{postDetail.description}</p>
-          )}
-
-          <div className="mt-3">
-            <p className="mb-2">
-              <FaCalendar />
-              &nbsp; {postDetail.createdAt}
-            </p>
           </div>
-          <div>
-            <p className="d-flex gap-2 flex-wrap">
-              <FaFacebook />
-              <FaInstagram />
-              <FaLinkedin />
-              <FaWhatsapp />
-            </p>
-          </div>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 };

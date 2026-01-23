@@ -7,7 +7,7 @@ const CreatePost = () => {
     title: "",
     description: "",
     imageUrl: "",
-    category: ""
+    category: "painting"
   });
   const [uploading, setUploading] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -65,7 +65,7 @@ const CreatePost = () => {
     e.preventDefault();
 
     // Validation
-    if (!formData.title || !formData.description || !formData.imageUrl || !formData.category) {
+    if (!formData.title || !formData.description || !formData.imageUrl) {
       toast.error("Please fill in all fields");
       return;
     }
@@ -89,7 +89,7 @@ const CreatePost = () => {
           title: "",
           description: "",
           imageUrl: "",
-          category: ""
+          category: "painting"
         });
         // Navigate to home after 1 second
         setTimeout(() => navigate("/"), 1000);
@@ -114,28 +114,6 @@ const CreatePost = () => {
             </div>
             <div className="card-body p-4">
               <form onSubmit={handleSubmit}>
-                {/* Category Selection */}
-                <div className="mb-3">
-                  <label htmlFor="category" className="form-label fw-bold">
-                    Category <span className="text-danger">*</span>
-                  </label>
-                  <select
-                    id="category"
-                    name="category"
-                    className="form-select"
-                    value={formData.category}
-                    onChange={handleInputChange}
-                    required
-                  >
-                    <option value="">Select a category</option>
-                    {categories.map(cat => (
-                      <option key={cat.value} value={cat.value}>
-                        {cat.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
                 {/* Title */}
                 <div className="mb-3">
                   <label htmlFor="title" className="form-label fw-bold">
