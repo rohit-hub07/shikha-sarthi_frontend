@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/userContext";
+import { useState } from "react";
 
 const NavBar = () => {
+
+  const [count, setCount] = useState(1);
+
   const gradientTextStyle = {
     fontSize: "20px",
     background: "radial-gradient(circle, red, yellow)",
@@ -11,16 +15,36 @@ const NavBar = () => {
 
   const { user, setUser } = useAuth();
 
-  const getAdminAccess = () => {
-    setUser(user ? false : true);
-  };
+  // const getAdminAccess = () => {
+    
+  // };
+  
+  const increaseCount = () => {
+    setCount(prev => prev+1);
+    console.log("count: ",count);
+    if(count >= 10){
+      setUser(user ? false : true);
+      setCount(1);
+    }
+  }
 
   return (
     <nav className="navbar navbar-expand-lg py-4 bg-primary navbar-dark">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/" style={gradientTextStyle}>
+        <button onClick={() => increaseCount()} className="navbar-brand border-0 d-flex align-items-center" to="/" style={gradientTextStyle}>
+          <img
+            src="/logo/logo_siksha_sarthi.jpg"
+            alt="Shiksha Sarthi Logo"
+            style={{
+              height: "60px",
+              width: "60px",
+              objectFit: "cover",
+              borderRadius: "50%",
+              marginRight: "12px"
+            }}
+          />
           Shiksha Sarthi
-        </Link>
+        </button>
 
         <button
           className="navbar-toggler"

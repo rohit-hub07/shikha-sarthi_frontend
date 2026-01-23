@@ -7,7 +7,6 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { useAuth } from "../context/userContext";
-import Carousel from "./Carousel";
 
 // default data
 const defaultData = {
@@ -172,20 +171,11 @@ const PiTi = () => {
 
       <div className="row g-3">
         <div className="col-12 col-md-6 col-lg-5">
-          <Carousel
-            images={[
-              "/physical_training1.jpeg",
-              "/physical_training2.jpeg",
-              "/running.jpeg",
-              "/running2.jpeg",
-              "/Exercise-img.png",
-              postDetail.imageUrl
-            ]}
-            height="50vh"
-            interval={1500}
-            transition="slide"
-            showIndicators={false}
-            showControls={false}
+          <img
+            src={postDetail.imageUrl}
+            alt="Exercise"
+            className="painting-img rounded img-fluid w-100"
+            style={{ height: "auto", maxHeight: "50vh", objectFit: "cover" }}
           />
           {isEditing && (
             <div className="mt-2">

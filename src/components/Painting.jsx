@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import toast from "react-hot-toast";
 import { FaCalendar, FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { useAuth } from "../context/userContext";
-import Carousel from "./Carousel";
 
 // default data
 const defaultData =
@@ -26,7 +25,7 @@ const Painting = () => {
 
   const fileInputRef = useRef(null);
 
-  const { user, setUser } = useAuth();
+  const { user } = useAuth();
 
   // Fetch post data
   useEffect(() => {
@@ -171,19 +170,11 @@ const Painting = () => {
 
       <div className="row g-3">
         <div className="col-12 col-md-6 col-lg-5">
-          {/* Image Carousel */}
-          <Carousel
-            images={[
-              "/art_compititon",
-              "/art_compitition2",
-              "/drawing-competition-img.jpg",
-              postDetail.imageUrl
-            ]}
-            height="50vh"
-            interval={1500}
-            transition="slide"
-            showIndicators={false}
-            showControls={false}
+          <img
+            src={postDetail.imageUrl}
+            alt="Painting"
+            className="painting-img rounded img-fluid w-100"
+            style={{ height: "auto", maxHeight: "50vh", objectFit: "cover" }}
           />
           {isEditing && (
             <div className="mt-2">
