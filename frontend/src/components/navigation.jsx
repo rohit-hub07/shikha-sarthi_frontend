@@ -443,6 +443,142 @@ const Navigation = ({ onQuoteClick }) => {
                 </Link>
               </li>
 
+              {/* <li className="nav-item dropdown d-flex align-items-center"> */}
+              {/* TEXT → PAGE NAVIGATION */}
+              {/* <Link className="nav-link" to="/">
+                  FURNITURE
+                </Link> */}
+
+              {/* ARROW → DROPDOWN */}
+              {/* <button
+                  className="nav-link dropdown-toggle btn btn-link p-0 ms-1"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                /> */}
+
+              {/* <ul className="dropdown-menu">
+                  <li>
+                    <Link to="/secondFront/" className="dropdown-item">
+                      Sofas & Sofa Beds
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/patna">
+                      Dining Tables & Sets
+                    </Link>
+                  </li>
+                  <li className="nav-item dropdown d-flex align-items-center"> */}
+              {/* TEXT → PAGE NAVIGATION */}
+              {/* <Link className="nav-link" to="/">
+                      FURNITURE
+                    </Link> */}
+
+              {/* ARROW → DROPDOWN */}
+              {/* <button
+                      className="nav-link dropdown-toggle btn btn-link p-0 ms-1"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    />
+
+                    <ul className="dropdown-menu">
+                      <li>
+                        <Link to="/secondFront/" className="dropdown-item">
+                          Sofas & Sofa Beds
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item" to="/secondFront/patna">
+                          Dining Tables & Sets
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li> */}
+
+              <li className="nav-item dropdown">
+                <Link
+                  className="nav-link dropdown-toggle"
+                  to="/"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Furniture
+                </Link>
+
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link className="dropdown-item" to="secondFront/sofas">
+                      Sofas & Sofa Beds
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link className="dropdown-item" to="/dining">
+                      Dining Tables & Sets
+                    </Link>
+                  </li>
+
+                  {/* Tables */}
+                  <li className="dropdown-submenu">
+                    <button className="dropdown-item d-flex justify-content-between align-items-center">
+                      Tables <span>›</span>
+                    </button>
+
+                    <ul className="dropdown-menu">
+                      <li>
+                        <Link className="dropdown-item" to="/tables/bedside">
+                          Bedside Tables
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item" to="/tables/center">
+                          Center & Coffee Tables
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item" to="/tables/nested">
+                          Nested Tables
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item" to="/tables/side">
+                          Side / End Tables
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+
+                  {/* Occasional Seating */}
+                  <li className="dropdown-submenu">
+                    <button className="dropdown-item d-flex justify-content-between align-items-center">
+                      Occasional Seating <span>›</span>
+                    </button>
+
+                    <ul className="dropdown-menu">
+                      <li>
+                        <Link className="dropdown-item" to="/chairs">
+                          Accent Chairs
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item" to="/benches">
+                          Benches
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item" to="/poufs">
+                          Poufs
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
               <li className="nav-item">
                 <Link className="nav-link" to="/project">
                   PROJECT
@@ -680,6 +816,88 @@ const Navigation = ({ onQuoteClick }) => {
               >
                 ABOUT
               </Link>
+            </li>
+
+            <li className="nav-item dropdown">
+              <Link
+                className="nav-link dropdown-toggle"
+                to="/furniture"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Furniture
+              </Link>
+
+              <ul className="dropdown-menu">
+                {/* Direct items */}
+                <li>
+                  <Link className="dropdown-item" to="/sofas">
+                    Sofas & Sofa Beds
+                  </Link>
+                </li>
+
+                <li>
+                  <Link className="dropdown-item" to="/dining">
+                    Dining Tables & Sets
+                  </Link>
+                </li>
+
+                {/* Tables (nested) */}
+                <li className="dropdown-submenu">
+                  <Link className="dropdown-item dropdown-toggle" to="#">
+                    Tables
+                  </Link>
+
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link className="dropdown-item" to="/tables/bedside">
+                        Bedside Tables
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/tables/center">
+                        Center & Coffee Tables
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/tables/nested">
+                        Nested Tables
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/tables/side">
+                        Side / End Tables
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+
+                {/* Occasional Seating (nested) */}
+                <li className="dropdown-submenu">
+                  <Link className="dropdown-item dropdown-toggle" to="#">
+                    Occasional Seating
+                  </Link>
+
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link className="dropdown-item" to="/chairs">
+                        Accent Chairs
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/benches">
+                        Benches
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/poufs">
+                        Poufs
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
 
             <li className="nav-item">
