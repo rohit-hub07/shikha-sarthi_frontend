@@ -388,12 +388,12 @@ const Navigation = ({ onQuoteClick }) => {
                 <ul className="dropdown-menu">
                   <li>
                     <Link to="/secondFront/saran" className="dropdown-item">
-                      Saran
+                      Balod
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/secondFront/patna">
-                      Patna
+                      Baloda Bazar
                     </Link>
                   </li>
                   <li>
@@ -401,22 +401,22 @@ const Navigation = ({ onQuoteClick }) => {
                       className="dropdown-item"
                       to="/secondFront/vijayawada"
                     >
-                      Vijayawada
+                      Balrampur-Ramanujganj
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/secondFront/kanpur">
-                      Kanpur
+                      Bastar
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/secondFront/goa">
-                      Goa
+                      Bijapur
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" href="#">
-                      Dehradun
+                      Bilaspur
                     </Link>
                   </li>
                   <li>
@@ -426,12 +426,137 @@ const Navigation = ({ onQuoteClick }) => {
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/secondFront/agra">
-                      Agra
+                      Dantewada (Dakshin Bastar)
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/secondFront/surat">
-                      Surat
+                      Dhamtari
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Durg
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Gariaband
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Gaurela-Pendra-Marwahi
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Janjgir-Champa
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Janjgir-Champa
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Jashpur
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Kabirdham (Kawardha)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Kanker
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Kondagaon
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Khairagarh-Chhuikhadan-Gandai
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Korba
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Koriya
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Mahasamund
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Manendragarh-Chirmiri-Bharatpur
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Mohla-Manpur-Ambagarh Chowki
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Mungeli
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Narayanpur
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Raigarh
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Raipur
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Rajnandgaon
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Sarangarh-Bilaigarh
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Sakti
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Sukma
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Surajpur
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/secondFront/surat">
+                      Surguja
                     </Link>
                   </li>
                 </ul>
@@ -442,61 +567,6 @@ const Navigation = ({ onQuoteClick }) => {
                   ABOUT
                 </Link>
               </li>
-
-              {/* <li className="nav-item dropdown d-flex align-items-center"> */}
-              {/* TEXT → PAGE NAVIGATION */}
-              {/* <Link className="nav-link" to="/">
-                  FURNITURE
-                </Link> */}
-
-              {/* ARROW → DROPDOWN */}
-              {/* <button
-                  className="nav-link dropdown-toggle btn btn-link p-0 ms-1"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                /> */}
-
-              {/* <ul className="dropdown-menu">
-                  <li>
-                    <Link to="/secondFront/" className="dropdown-item">
-                      Sofas & Sofa Beds
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/secondFront/patna">
-                      Dining Tables & Sets
-                    </Link>
-                  </li>
-                  <li className="nav-item dropdown d-flex align-items-center"> */}
-              {/* TEXT → PAGE NAVIGATION */}
-              {/* <Link className="nav-link" to="/">
-                      FURNITURE
-                    </Link> */}
-
-              {/* ARROW → DROPDOWN */}
-              {/* <button
-                      className="nav-link dropdown-toggle btn btn-link p-0 ms-1"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    />
-
-                    <ul className="dropdown-menu">
-                      <li>
-                        <Link to="/secondFront/" className="dropdown-item">
-                          Sofas & Sofa Beds
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="dropdown-item" to="/secondFront/patna">
-                          Dining Tables & Sets
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li> */}
 
               <li className="nav-item dropdown">
                 <Link
