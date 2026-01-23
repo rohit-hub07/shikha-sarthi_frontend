@@ -33,11 +33,11 @@ const NavBar = () => {
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <button onClick={() => getAdminAccess()} className="nav-link">
                 Admin Access
               </button>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link className="nav-link" to="/">
                 Home

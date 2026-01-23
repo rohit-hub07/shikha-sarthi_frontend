@@ -7,6 +7,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { useAuth } from "../context/userContext";
+import Carousel from "./Carousel";
 
 // default data
 const defaultData = {
@@ -212,11 +213,18 @@ const Prayer = () => {
         </div>
 
         <div className="col-12 col-md-6 col-lg-5 order-md-2 order-1">
-          <img
-            src={postDetail.imageUrl}
-            alt="Prayer"
-            className="painting-img rounded img-fluid w-100"
-            style={{ height: "auto", maxHeight: "50vh", objectFit: "cover" }}
+          <Carousel
+            images={[
+              "/morning_prayer.jpeg",
+              "/morning_prayer2.jpeg",
+              "/Morning-prayer-img.jpg",
+              postDetail.imageUrl
+            ]}
+            height="50vh"
+            interval={1500}
+            transition="slide"
+            showIndicators={false}
+            showControls={false}
           />
           {isEditing && (
             <div className="mt-2">
