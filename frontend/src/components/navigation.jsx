@@ -85,7 +85,7 @@ const Navigation = ({ onQuoteClick }) => {
               <li className="nav-item dropdown d-flex align-items-center">
                 {/* TEXT → PAGE NAVIGATION */}
                 <Link className="nav-link" to="/">
-                  Design Ideas
+                  DESIGN IDEAS
                 </Link>
 
                 {/* ARROW → DROPDOWN */}
@@ -281,7 +281,7 @@ const Navigation = ({ onQuoteClick }) => {
               <li className="nav-item dropdown d-flex align-items-center">
                 {/* TEXT → PAGE NAVIGATION */}
                 <Link className="nav-link" to="/">
-                  Magazine
+                  MAGAZINE
                 </Link>
 
                 {/* ARROW → DROPDOWN */}
@@ -374,7 +374,7 @@ const Navigation = ({ onQuoteClick }) => {
               <li className="nav-item dropdown d-flex align-items-center">
                 {/* TEXT → PAGE NAVIGATION */}
                 <Link className="nav-link" to="/">
-                  Cities
+                  CITIES
                 </Link>
 
                 {/* ARROW → DROPDOWN */}
@@ -576,7 +576,7 @@ const Navigation = ({ onQuoteClick }) => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Furniture
+                  FURNITURE
                 </Link>
 
                 <ul className="dropdown-menu">
@@ -685,7 +685,7 @@ const Navigation = ({ onQuoteClick }) => {
                   onClick={onQuoteClick}
                   className="btn btn-danger px-4 py-2 rounded-3 shadow-sm"
                 >
-                  Get Free Quote
+                  GET FREE QUOTE
                 </button>
               </li>
             </ul>
@@ -726,7 +726,7 @@ const Navigation = ({ onQuoteClick }) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Design Ideas
+                DESIGN IDEAS
               </Link>
               <ul className="dropdown-menu">
                 <li>
@@ -779,7 +779,7 @@ const Navigation = ({ onQuoteClick }) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Magazine
+                MAGAZINE
               </Link>
               <ul className="dropdown-menu">
                 <li>
@@ -832,7 +832,7 @@ const Navigation = ({ onQuoteClick }) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Cities
+                CITIES
               </Link>
               <ul className="dropdown-menu">
                 <li>
@@ -896,7 +896,7 @@ const Navigation = ({ onQuoteClick }) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Furniture
+                FURNITURE
               </Link>
 
               <ul className="dropdown-menu">
@@ -1017,7 +1017,7 @@ const Navigation = ({ onQuoteClick }) => {
                 className="btn btn-danger w-100 shadow-sm"
                 data-bs-dismiss="offcanvas"
               >
-                Get Free Quote
+                GET FREE QUOTE
               </button>
             </li>
           </ul>
