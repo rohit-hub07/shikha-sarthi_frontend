@@ -587,7 +587,7 @@ const Navigation = ({ onQuoteClick }) => {
                   </li>
 
                   <li>
-                    <Link className="dropdown-item" to="/dining">
+                    <Link className="dropdown-item" to="secondFront/diningTables">
                       Dining Tables & Sets
                     </Link>
                   </li>

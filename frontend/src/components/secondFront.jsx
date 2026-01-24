@@ -1,22 +1,7 @@
-// import { Outlet } from "react-router-dom";
-// import Template from "../designIdeas/template/designIdeas";
-
-// const secondFront = () => {
-//   return (
-//     <div>
-//       <div>secondFront</div>
-//       <Template pageKey="design4" />
-//       <Outlet />
-//     </div>
-//   );
-// };
-
-// export default secondFront;
-
-
 import { useParams } from "react-router-dom";
 import Template from "../designIdeas/template/designIdeas";
 import TemplateForCities from "../designIdeas/template/templateForCities";
+import Furniture from "../designIdeas/template/furniture";
 
 const SecondFront = () => {
   const { designType } = useParams();
@@ -64,25 +49,16 @@ const SecondFront = () => {
     surat: "city8"
   }
 
+  const furnitureMap = {
+    sofas: "sofas",
+    diningTables:"diningTable",
+    tables: "tables",
+    occationalSetting: "occationalSetting"
+  }
+
   const pageKey = apiMap[designType];
   const cityKey = cityMap[designType];
-
-  // Safety check
-  // if (!pageKey) {
-  //   return (
-  //     <div style={{ padding: "2rem", textAlign: "center" }}>
-  //       <h2>Design not found</h2>
-  //       <p>Please select a valid design.</p>
-  //     </div>
-  //   );
-  // }
-
-  // return (
-  //   <div>
-  //     <Template pageKey={pageKey} />
-  //     <TemplateForCities pageKey={cityKey} />
-  //   </div>
-  // );
+  const furnitureKey = furnitureMap[designType];
 
   // DESIGN PAGE
   if (pageKey) {
@@ -92,6 +68,11 @@ const SecondFront = () => {
   // CITY PAGE
   if (cityKey) {
     return <TemplateForCities cityKey={cityKey} />;
+  }
+
+  // FURNITURE PAGE
+  if (furnitureKey) {
+    return <Furniture cityKey={furnitureKey} />;
   }
 
   // INVALID ROUTE
