@@ -27,7 +27,7 @@ const Template = ({ pageKey }) => {
       : 0;
 
   return (
-    <section>
+    <div className="container text-start py-4 mt-3">
       <p className="text-body-secondary">Showing {imageCount} Results for</p>
       <h1 className="section-heading">{config.title}</h1>
       {/* <p>{config.description}</p> */}
@@ -45,17 +45,17 @@ const Template = ({ pageKey }) => {
           >
             {showFullDesc ? (
               <>
-                Read Less <FaChevronUp size={12} />
+                Read Less <FaChevronUp size={10} />
               </>
             ) : (
               <>
-                Read More <FaChevronDown size={12} />
+                Read More <FaChevronDown size={10} />
               </>
             )}
           </button>
         )}
       </div>
-      <div className="row g-4 mt-3">
+      <div className="row g-4 mt-2">
         {Array.isArray(config.images) &&
           config.images.map((item, index) => (
             <div className="col-md-4" key={index}>
@@ -72,7 +72,7 @@ const Template = ({ pageKey }) => {
                 <div className="card-body">
                   <p className="mb-1">{item.shortDesc}</p>
                   {item.size && (
-                    <p className="mb-2 text-body-secondary">
+                    <p className="mb-1 text-body-secondary">
                       Size: {item.size}
                     </p>
                   )}
@@ -81,14 +81,14 @@ const Template = ({ pageKey }) => {
                 {/* FIXED BUTTONS (PER IMAGE) */}
                 <div className="d-flex gap-2">
                   <button
-                    className="btn btn-outline-danger btn-sm w-50"
+                    className="btn btn-outline-danger btn-sm ms-2 mb-2 w-50"
                     onClick={() => handleConsult(item)}
                   >
                     Book Free Consultation
                   </button>
 
                   <button
-                    className="btn btn-danger btn-sm w-50"
+                    className="btn btn-danger btn-sm me-2 mb-2 w-50"
                     onClick={() => handleQuote(item)}
                   >
                     Get Quote
@@ -118,7 +118,7 @@ const Template = ({ pageKey }) => {
           ))}
         </div>
       )}
-    </section>
+    </div>
   );
 };
 
