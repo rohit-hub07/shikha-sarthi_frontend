@@ -6,6 +6,8 @@ import Furniture from "../designIdeas/template/furniture";
 const SecondFront = () => {
   const { designType } = useParams();
 
+  console.log("designType: ", designType);
+
   // Decide API based on button clicked
   const apiMap = {
     modularKitchen: "design1",
