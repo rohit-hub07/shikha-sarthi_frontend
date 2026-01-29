@@ -1,5 +1,3 @@
-import React from 'react'
-
 const reviews = [
   {
     initials: "TP",
@@ -24,14 +22,14 @@ const reviews = [
   },
 ];
 
-const City5 = () => {
+const Testimonials = () => {
   return (
     <div className="container my-5">
       {/* Header */}
       <div className="row align-items-start mb-4">
         <div className="col-lg-8">
           <h2 className="fw-bold">
-            Livspace Home Interior Design Reviews
+            Colours Kitchen Home Interior Design Reviews
           </h2>
           <p className="text-muted mt-2">
             For a team that aims at making customers feel at home, these
@@ -97,4 +95,4 @@ const City5 = () => {
   )
 }
 
-export default City5
+export default Testimonials

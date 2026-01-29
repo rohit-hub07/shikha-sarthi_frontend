@@ -1,7 +1,7 @@
 import blogs from "./blog";
 import BlogCard from "./blogCard";
 
-const City8 = () => {
+const Magazine = () => {
   return (
     <div className="container my-5">
       {/* Header */}
@@ -27,4 +27,4 @@ const City8 = () => {
   );
 };
 
-export default City8;
+export default Magazine;

@@ -1,4 +1,4 @@
-const City2 = () => {
+const WorkProcess = () => {
   return (
     <div className="bg-dark-subtle">
       <div className="container text-start pb-5 mb-2">
@@ -61,4 +61,4 @@ const City2 = () => {
   );
 };
 
-export default City2;
+export default WorkProcess;

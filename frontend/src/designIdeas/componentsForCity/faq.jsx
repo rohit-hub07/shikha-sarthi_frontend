@@ -1,6 +1,6 @@
 // import './faq.css'
 
-const City9 = ({ cityName }) => {
+const FAQ = ({ cityName }) => {
   return (
     <div>
       <div className="container my-5">
@@ -374,4 +374,4 @@ const City9 = ({ cityName }) => {
   );
 };
 
-export default City9;
+export default FAQ;

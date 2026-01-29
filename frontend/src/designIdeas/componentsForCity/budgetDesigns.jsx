@@ -1,12 +1,10 @@
-import React from 'react'
-
-const City3 = () => {
+const BudgetDesigns = () => {
   return (
     <div className="container text-start pb-5 mb-2">
-      <h2>Bought a new home?</h2>
+      <h2>Homes for every budget</h2>
       <p>
-        Get interiors that your family members and friends would love. Our
-        interior designers in Jaipur can make that happen!
+        Our best interior designers in Jaipur work with you keeping in mind your
+        requirements and budget
       </p>
       <div className="container my-5">
         <div className="row g-4">
@@ -34,7 +32,7 @@ const City3 = () => {
       </div>
       <p>*The prices include only modular interiors for new homes.</p>
     </div>
-  )
-}
+  );
+};
 
-export default City3
+export default BudgetDesigns;

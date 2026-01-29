@@ -1,6 +1,6 @@
 import { IoIosArrowForward } from "react-icons/io";
 
-const City4 = () => {
+const PriceEstimator = () => {
   return (
     <div className="bg-body-secondary">
       <div className="container text-start pb-5 mb-2">
@@ -77,4 +77,4 @@ const City4 = () => {
   );
 };
 
-export default City4;
+export default PriceEstimator;

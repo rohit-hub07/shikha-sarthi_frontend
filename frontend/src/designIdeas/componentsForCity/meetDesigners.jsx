@@ -1,7 +1,7 @@
 import { useState } from "react";
 import centres from "./centres";
 
-const City1 = ({ cityName }) => {
+const MeetDesigners = ({ cityName }) => {
   const [activeCentre, setActiveCentre] = useState("bello");
   const data = centres[activeCentre];
 
@@ -10,7 +10,7 @@ const City1 = ({ cityName }) => {
       {/* Header */}
       <div className="d-flex justify-content-between align-items-start mb-4 flex-wrap">
         <div>
-          <h2 className="fw-bold">Home Interior Designers in Jaipur</h2>
+          <h2 className="fw-bold">Home Interior Designers in {cityName}</h2>
           <p className="text-muted">
             Visit our Experience Centre in Jaipur to explore the best interior
             design in Jaipur for your home.
@@ -102,4 +102,4 @@ const City1 = ({ cityName }) => {
   )
 }
 
-export default City1
+export default MeetDesigners

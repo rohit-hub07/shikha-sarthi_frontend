@@ -1,4 +1,4 @@
-const City7 = () => {
+const DesignModules = () => {
   return (
     <div className="bg-body-secondary">
       <div className="container text-start pb-5 mb-2">
@@ -58,4 +58,4 @@ const City7 = () => {
   );
 };
 
-export default City7;
+export default DesignModules;

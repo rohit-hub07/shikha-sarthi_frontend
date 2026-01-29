@@ -1,11 +1,8 @@
-import React from "react";
-
-const City6 = () => {
+const ReasonToLoveUs = () => {
   return (
     <div className=" bg-body-secondary">
       <div className="container text-start pb-5 mb-2">
-        <h2>Interior Price Estimator</h2>
-        <p>Calculate the approximate cost of doing up your interiors.</p>
+        <h2>Reasons to love us</h2>
         <div className="container my-5">
           <div className="row g-4">
             {/* Card 1 */}
@@ -118,4 +115,4 @@ const City6 = () => {
   );
 };
 
-export default City6;
+export default ReasonToLoveUs;

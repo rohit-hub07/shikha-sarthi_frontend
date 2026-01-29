@@ -5,15 +5,15 @@ import { fetchData } from "../api/api";
 import "./template.css";
 
 import Banner from "../componentsForCity/banner";
-import City1 from "../componentsForCity/city1";
-import City2 from "../componentsForCity/city2";
-import City3 from "../componentsForCity/city3";
-import City4 from "../componentsForCity/city4";
-import City5 from "../componentsForCity/city5";
-import City6 from "../componentsForCity/city6";
-import City7 from "../componentsForCity/city7";
-import City8 from "../componentsForCity/city8";
-import City9 from "../componentsForCity/city9";
+import MeetDesigners from "../componentsForCity/meetDesigners";
+import WorkProcess from "../componentsForCity/workProcess";
+import BudgetDesigns from "../componentsForCity/budgetDesigns";
+import PriceEstimator from "../componentsForCity/priceEstimator";
+import Testimonials from "../componentsForCity/testimonials";
+import ReasonToLoveUs from "../componentsForCity/reasonToLoveUs";
+import DesignModules from "../componentsForCity/designModules";
+import Magazine from "../componentsForCity/magazine";
+import FAQ from "../componentsForCity/faq";
 
 const Template = ({ cityKey }) => {
   const config = pageConfig[cityKey];
@@ -40,43 +40,16 @@ const Template = ({ cityKey }) => {
     <section>
       <Banner cityName={config.cityName} />
       <div style={{ marginTop: "40px", marginBottom: "20px" }}>
-        <City1 cityName={config.cityName} />
+        <MeetDesigners cityName={config.cityName} />
       </div>
-      <City2 />
-      <City3 />
-      <City4 />
-      <City5 />
-      <City6 />
-      <City7 />
-      <City8 />
-      <City9 />
-      {/* <p className="text-body-secondary">Showing {imageCount} Results for</p> */}
-      {/* <h1 className="section-heading">{config.title}</h1> */}
-      {/* <p>{config.description}</p> */}
-      {/* <div>
-        <p>
-          {showFullDesc || config.description.length <= DESC_LIMIT
-            ? config.description
-            : config.description.slice(0, DESC_LIMIT) + "..."}
-        </p>
-
-        {config.description.length > DESC_LIMIT && (
-          <button
-            onClick={() => setShowFullDesc(!showFullDesc)}
-            className="btn btn-link p-0 text-danger text-decoration-none"
-          >
-            {showFullDesc ? (
-              <>
-                Read Less <FaChevronUp size={12} />
-              </>
-            ) : (
-              <>
-                Read More <FaChevronDown size={12} />
-              </>
-            )}
-          </button>
-        )}
-      </div> */}
+      <WorkProcess />
+      <BudgetDesigns />
+      <PriceEstimator />
+      <Testimonials />
+      <ReasonToLoveUs />
+      <DesignModules />
+      <Magazine />
+      <FAQ />
       <div className="row g-4 mt-3">
         {Array.isArray(config.images) &&
           config.images.map((item, index) => (
