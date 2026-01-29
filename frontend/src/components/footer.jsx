@@ -25,7 +25,7 @@ const Footer = () => {
       <button
         type="button"
         onClick={handleClick}
-        class="btn btn-secondary btn-sm ms-3"
+        className="btn btn-secondary btn-sm ms-3"
       >
         Admin
       </button>

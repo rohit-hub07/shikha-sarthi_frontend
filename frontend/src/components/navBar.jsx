@@ -279,77 +279,77 @@ const NavBar = ({ onQuoteClick }) => {
                 <ul className="dropdown-menu">
                   <li>
                     <Link
-                      to="/secondFront/modularKitchen"
+                      to="/magazine/?query=room-ideas"
                       className="dropdown-item"
                     >
                       Room Ideas
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/bedroom">
+                    <Link className="dropdown-item" to="/magazine/?query=decor-inspiration">
                       Decor & Inspiration
                     </Link>
                   </li>
                   <li>
                     <Link
                       className="dropdown-item"
-                      to="/secondFront/livingroom"
+                      to="/magazine/?query=ceiling-designs"
                     >
                       Ceiling Designs
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/magazine/?query=furniture-ideas">
                       Furniture Ideas
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/magazine/?query=home-decor">
                       Home Decor
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/magazine/?query=lighting-ideas">
                       Lighting Ideas
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/magazine/?query=wall-design-ideas">
                       Wall Design Ideas
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/magazine/?query=expert-advice">
                       Expert Advice
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/magazine/?query=interior-advice">
                       Interior Advice
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/magazine/?query=vastu-tips">
                       Vastu Tips
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/magazine/?query=home-organisation">
                       Home Organisation
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/magazine/?query=materials-guide">
                       Materials Guide
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/magazine/?query=home-renovation-ideas">
                       Home Renovation Ideas
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/magazine/?query=commercial-interiors">
                       Commercial Interiors
                     </Link>
                   </li>
