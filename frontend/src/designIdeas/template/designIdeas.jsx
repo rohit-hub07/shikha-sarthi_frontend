@@ -79,16 +79,16 @@ const Template = ({ pageKey }) => {
                 </div>
 
                 {/* FIXED BUTTONS (PER IMAGE) */}
-                <div className="d-flex gap-2">
-                  <button
+                <div className="d-flex justify-content-center">
+                  {/* <button
                     className="btn btn-outline-danger btn-sm ms-2 mb-2 w-50"
                     onClick={() => handleConsult(item)}
                   >
                     Book Free Consultation
-                  </button>
+                  </button> */}
 
                   <button
-                    className="btn btn-danger btn-sm me-2 mb-2 w-50"
+                    className="btn btn-danger btn-sm mb-2 w-50"
                     onClick={() => handleQuote(item)}
                   >
                     Get Quote
