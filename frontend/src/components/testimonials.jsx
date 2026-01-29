@@ -3,7 +3,7 @@ import profile2 from "/Aditya-Sinha.jpg";
 import family1 from "/family1.jpg";
 import family2 from "/family2.jpg";
 
-const Home6 = () => {
+const Testimonials = () => {
   return (
     <div className="bg-dark-subtle py-4">
       <div className="container">
@@ -90,4 +90,4 @@ const Home6 = () => {
   );
 };
 
-export default Home6;
+export default Testimonials;

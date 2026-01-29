@@ -3,7 +3,7 @@ import KitchenDesign from "./kitchen-design";
 import Bedroom from "./bedroom-interiors";
 import Livingroom from "./living-room-interiors";
 import Service from "./service";
-import Home6 from "./home6";
+import Testimonials from "./testimonials";
 import Gallery from "./gallery";
 import CTA from "./callToAction";
 import HomeBanner from "./banner";
@@ -19,7 +19,7 @@ const Home = () => {
       <div id="services">
         <Service />
       </div>
-      <Home6 />
+      <Testimonials />
       <Gallery />
       <CTA />
     </div>
