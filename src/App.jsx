@@ -1,67 +1,106 @@
-import { Link, Routes, Route } from 'react-router-dom'
-import { Toaster } from 'react-hot-toast';
+import { Link, Routes, Route, useNavigate } from "react-router-dom";
+import { useState } from "react";
 // import Home from './home/Home'
-// import Upload from './pages/Upload'
+import Upload from "./pages/Upload";
+// import Login from './pages/Login'
+// import Register from './pages/Register'
+import { getUser, clearAuth, getToken } from "./lib/auth";
 // import './App.css'
 
-import Footer from './components/Footer.jsx';
-import NavBar from './components/Navbar.jsx';
+import Home from "./components/home";
+import SecondFront from "./components/secondFront";
+import NavBar from "./components/navBar.jsx";
+import Footer from "./components/footer";
+import ConsultationForm from "./components/consultationForm.jsx";
 
-import Home from './pages/Home.jsx';
-import About from './pages/About.jsx';
-import Contact from './pages/Contact.jsx';
-import Health from './pages/Health.jsx';
-import EPaper from './pages/EPaper.jsx';
-import CreatePost from './pages/CreatePost.jsx';
+const API =
+  import.meta.env.VITE_API_URL || "https://react-shiksak-sarthi-d.vercel.app";
 
 function App() {
+  const [user, setUser] = useState(getUser());
+  const navigate = useNavigate();
+
+  // POPUP STATE
+  const [showPopup, setShowPopup] = useState(false);
+
+  // OPEN POPUP METHOD (will be sent to Navbar)
+  const openPopup = () => setShowPopup(true);
+  const closePopup = () => setShowPopup(false);
+
+  async function handleLogout() {
+    try {
+      const token = getToken();
+      if (token) {
+        await fetch(`${API}/api/auth/logout`, {
+          // || 'http://localhost:5173'}/api/auth/logout, {
+          method: "POST",
+          headers: { Authorization: `Bearer ${token}` },
+        });
+      }
+    } catch (err) {
+      // ignore logout network errors
+      console.error("Logout error", err);
+    }
+    clearAuth();
+    setUser(null);
+    navigate("/");
+  }
+
   return (
-    // <div>
-    //   <nav style={{ padding: 12, borderBottom: '1px solid #eee' }}>
-    //     <Link to="/" style={{ marginRight: 12 }}>Home</Link>
-    //     <Link to="/upload">Upload</Link>
-    //   </nav>
+    <div className="text-bg-light">
+      {/* <nav style={{ padding: 12, borderBottom: '1px solid #eee', display: 'flex', justifyContent: 'space-between' }}>
+        <div>
+          <Link to="/" style={{ marginRight: 12 }}>Home</Link>
+          <Link to="/upload" style={{ marginRight: 12 }}>Upload</Link>
+          <Link to="/front">Front</Link>
+        </div>
+        <div>
+          {user ? (
+            <>
+              <span style={{ marginRight: 12 }}>Hello, {user.name}</span>
+              <button onClick={handleLogout} style={{ padding: '6px 10px', borderRadius: 6 }}>Logout</button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" style={{ marginRight: 12 }}>Login</Link>
+              <Link to="/register">Register</Link>
+            </>
+          )}
+        </div>
+      </nav> */}
+      <NavBar onQuoteClick={openPopup} />
 
-    //   <main style={{ padding: 12 }}>
-    //     <Routes>
-    //       <Route path="/" element={<Home />} />
-    //       <Route path="/upload" element={<Upload />} />
-    //     </Routes>
-    //   </main>
-    // </div>
-    <div>
-      <NavBar />
-      <div>
+      <main>
         <Routes>
+          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/upload" element={<Upload />} />
           <Route path="/" element={<Home />} />
-          <Route path="/health" element={<Health />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/epaper" element={<EPaper />} />
-          <Route path="/create-post" element={<CreatePost />} />
+          <Route path="/secondFront/:designType" element={<SecondFront />} />
+          {/* <Route path="/login" element={<Login onLogin={(u) => setUser(u)} />} />
+          <Route path="/register" element={<Register onRegister={(u) => setUser(u)} />} /> */}
         </Routes>
-        <Toaster
-          position="top-center"
-          toastOptions={{
-            duration: 4000,
-            style: {
-              background: "#363636",
-              color: "#fff",
-            },
-            success: {
-              duration: 3000,
-              theme: {
-                primary: "green",
-                secondary: "black",
-              },
-            },
-          }}
-        />
-      </div>
-
+      </main>
       <Footer />
+      {/* POPUP OVERLAY */}
+      {showPopup && (
+        <div
+          className="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center"
+          style={{ backgroundColor: "rgba(0,0,0,0.6)", zIndex: 9999 }}
+        >
+          <div
+            className="bg-white p-4 rounded shadow"
+            style={{ width: "90%", paddingTop: "90px", maxWidth: "600px" }}
+          >
+            <button
+              className="btn-close float-end"
+              onClick={closePopup}
+            ></button>
+            <ConsultationForm onSuccess={closePopup} />
+          </div>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
