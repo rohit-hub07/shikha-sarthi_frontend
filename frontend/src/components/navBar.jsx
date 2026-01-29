@@ -4,7 +4,7 @@ import logo from "/colours-kitchen-logo.png";
 
 import "./image.css";
 
-const Navigation = ({ onQuoteClick }) => {
+const NavBar = ({ onQuoteClick }) => {
   const navigate = useNavigate();
   // const gradientTextStyle = {
   //   fontSize: "40px",
@@ -1011,4 +1011,4 @@ const Navigation = ({ onQuoteClick }) => {
   );
 };
 
-export default Navigation;
+export default NavBar;

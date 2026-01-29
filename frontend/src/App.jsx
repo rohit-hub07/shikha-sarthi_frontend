@@ -9,7 +9,7 @@ import { getUser, clearAuth, getToken } from "./lib/auth";
 
 import Home from "./components/home";
 import SecondFront from "./components/secondFront";
-import Navigation from "./components/navigation";
+import NavBar from "./components/navBar.jsx";
 import Footer from "./components/footer";
 import ConsultationForm from "./components/consultationForm.jsx";
 
@@ -68,7 +68,7 @@ function App() {
           )}
         </div>
       </nav> */}
-      <Navigation onQuoteClick={openPopup} />
+      <NavBar onQuoteClick={openPopup} />
 
       <main>
         <Routes>
