@@ -62,30 +62,14 @@ const Navigation = ({ onQuoteClick }) => {
           <div className="collapse navbar-collapse d-none d-lg-flex">
             <ul className="navbar-nav ms-auto align-items-center gap-4 flex-nowrap">
               <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  HOME
+                <Link className="nav-link fw-semibold" to="/">
+                  Home
                 </Link>
               </li>
-              {/* <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  to="/secondFront"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Design Ideas
-                </Link>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="/secondFront/modularKitchen">
-                      Modular Kitchen Designs
-                    </Link>
-                  </li> */}
               <li className="nav-item dropdown d-flex align-items-center">
                 {/* TEXT → PAGE NAVIGATION */}
-                <Link className="nav-link" to="/">
-                  DESIGN IDEAS
+                <Link className="nav-link fw-semibold" to="/">
+                  Design Ideas
                 </Link>
 
                 {/* ARROW → DROPDOWN */}
@@ -280,8 +264,8 @@ const Navigation = ({ onQuoteClick }) => {
               </li>
               <li className="nav-item dropdown d-flex align-items-center">
                 {/* TEXT → PAGE NAVIGATION */}
-                <Link className="nav-link" to="/">
-                  MAGAZINE
+                <Link className="nav-link fw-semibold" to="/">
+                  Magazine
                 </Link>
 
                 {/* ARROW → DROPDOWN */}
@@ -373,8 +357,8 @@ const Navigation = ({ onQuoteClick }) => {
               </li>
               <li className="nav-item dropdown d-flex align-items-center">
                 {/* TEXT → PAGE NAVIGATION */}
-                <Link className="nav-link" to="/">
-                  CITIES
+                <Link className="nav-link fw-semibold" to="/">
+                  Cities
                 </Link>
 
                 {/* ARROW → DROPDOWN */}
@@ -563,20 +547,20 @@ const Navigation = ({ onQuoteClick }) => {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
-                  ABOUT
+                <Link className="nav-link fw-semibold" to="/about">
+                  About
                 </Link>
               </li>
 
               <li className="nav-item dropdown">
                 <Link
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle fw-semibold"
                   to="/"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  FURNITURE
+                  Furniture
                 </Link>
 
                 <ul className="dropdown-menu">
@@ -650,8 +634,8 @@ const Navigation = ({ onQuoteClick }) => {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/project">
-                  PROJECT
+                <Link className="nav-link fw-semibold" to="/project">
+                  Project
                 </Link>
               </li>
 
@@ -661,10 +645,10 @@ const Navigation = ({ onQuoteClick }) => {
 
               <li className="nav-item">
                 <button
-                  className="nav-link btn btn-link"
+                  className="nav-link btn btn-link fw-semibold"
                   onClick={goToServices}
                 >
-                  SERVICES
+                  Services
                 </button>
               </li>
 
@@ -683,9 +667,9 @@ const Navigation = ({ onQuoteClick }) => {
               <li className="nav-item">
                 <button
                   onClick={onQuoteClick}
-                  className="btn btn-danger px-4 py-2 rounded-3 shadow-sm"
+                  className="btn btn-danger px-4 py-2 rounded-3 shadow-sm fw-semibold"
                 >
-                  GET FREE QUOTE
+                  Get Free Quote
                 </button>
               </li>
             </ul>
@@ -715,7 +699,7 @@ const Navigation = ({ onQuoteClick }) => {
           <ul className="navbar-nav gap-0.5">
             <li className="nav-item">
               <Link className="nav-link" to="/" data-bs-dismiss="offcanvas">
-                HOME
+                Home
               </Link>
             </li>
             <li className="nav-item dropdown">
@@ -726,60 +710,7 @@ const Navigation = ({ onQuoteClick }) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                DESIGN IDEAS
-              </Link>
-              <ul className="dropdown-menu">
-                <li>
-                  <Link className="dropdown-item" href="#">
-                    Modular Kitchen Designs
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" href="#">
-                    Bedroom Designs
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" href="#">
-                    Livingroom Designs
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" href="#">
-                    Design Ideas 4
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" href="#">
-                    Designs Ideas 5
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" href="#">
-                    Designs Ideas 6
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" href="#">
-                    Designs Ideas 7
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" href="#">
-                    Designs Ideas 8
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                MAGAZINE
+                Design Ideas
               </Link>
               <ul className="dropdown-menu">
                 <li>
@@ -832,7 +763,60 @@ const Navigation = ({ onQuoteClick }) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                CITIES
+                Magazine
+              </Link>
+              <ul className="dropdown-menu">
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Modular Kitchen Designs
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Bedroom Designs
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Livingroom Designs
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Design Ideas 4
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 5
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 6
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 7
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" href="#">
+                    Designs Ideas 8
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="nav-item dropdown">
+              <Link
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Cities
               </Link>
               <ul className="dropdown-menu">
                 <li>
@@ -884,7 +868,7 @@ const Navigation = ({ onQuoteClick }) => {
                 to="/about"
                 data-bs-dismiss="offcanvas"
               >
-                ABOUT
+                About
               </Link>
             </li>
 
@@ -896,7 +880,7 @@ const Navigation = ({ onQuoteClick }) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                FURNITURE
+                Furniture
               </Link>
 
               <ul className="dropdown-menu">
@@ -976,7 +960,7 @@ const Navigation = ({ onQuoteClick }) => {
                 to="/project"
                 data-bs-dismiss="offcanvas"
               >
-                PROJECT
+                Project
               </Link>
             </li>
 
@@ -995,7 +979,7 @@ const Navigation = ({ onQuoteClick }) => {
                 onClick={goToServices}
                 data-bs-dismiss="offcanvas"
               >
-                SERVICES
+                Services
               </button>
             </li>
 
@@ -1017,7 +1001,7 @@ const Navigation = ({ onQuoteClick }) => {
                 className="btn btn-danger w-100 shadow-sm"
                 data-bs-dismiss="offcanvas"
               >
-                GET FREE QUOTE
+                Get Free Quote
               </button>
             </li>
           </ul>
