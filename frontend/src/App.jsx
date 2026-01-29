@@ -7,7 +7,7 @@ import Upload from "./pages/Upload";
 import { getUser, clearAuth, getToken } from "./lib/auth";
 // import './App.css'
 
-import Front from "./components/front";
+import Home from "./components/home";
 import SecondFront from "./components/secondFront";
 import Navigation from "./components/navigation";
 import Footer from "./components/footer";
@@ -74,7 +74,7 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<Home />} /> */}
           <Route path="/upload" element={<Upload />} />
-          <Route path="/" element={<Front />} />
+          <Route path="/" element={<Home />} />
           <Route path="/secondFront/:designType" element={<SecondFront />} />
           {/* <Route path="/login" element={<Login onLogin={(u) => setUser(u)} />} />
           <Route path="/register" element={<Register onRegister={(u) => setUser(u)} />} /> */}

@@ -5,7 +5,7 @@ import image4 from "/image4.png";
 import image5 from "/image5.png";
 import image6 from "/image6.png";
 
-const Home5 = () => {
+const Service = () => {
   return (
     <div className="container py-4">
       <div className="text-center mb-4">
@@ -86,4 +86,4 @@ const Home5 = () => {
   );
 };
 
-export default Home5;
+export default Service;

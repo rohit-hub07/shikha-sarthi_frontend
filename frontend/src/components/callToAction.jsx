@@ -1,5 +1,5 @@
 
-const Home10 = () => {
+const CallToAction = () => {
   return (
     <div className="bg-light text-center mt-3">
         <h2>Ready To Design Your Dream Home ?</h2>
@@ -11,4 +11,4 @@ const Home10 = () => {
   )
 }
 
-export default Home10
+export default CallToAction

@@ -4,7 +4,7 @@ import "./image.css";
 const API =
   import.meta.env.VITE_API_URL || "https://react-shiksak-sarthi-d.vercel.app/";
 
-export default function Home7() {
+export default function Gallery() {
   const [images, setImages] = useState([]); // uploaded images
   const [startIndex, setStartIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3); // Desktop default = 3
@@ -45,18 +45,6 @@ export default function Home7() {
         url: item.url,
         description: item.description,
       }));
-      /*
-      const resources = data.resources || [];
-
-      // take only images
-      const uploadedImages = resources
-        .filter((r) => r.resource_type === "image")
-        .map((r) => ({
-          id: r.asset_id || r.public_id,
-          url: r.secure_url,
-          descriptions: r.description || "",
-        }));
-*/
       setImages(uploadedImages);
     } catch (err) {
       console.error("Failed to load images", err);
@@ -94,9 +82,6 @@ export default function Home7() {
 
   // active dot is RELATIVE
   const activeDot = startIndex - dotWindowStart;
-
-  // Change slide by clicking dot
-  // const goToSlide = (i) => setStartIndex(i);
 
   const goToSlide = (dotIndex) => {
     setStartIndex(dotWindowStart + dotIndex);
@@ -163,26 +148,7 @@ export default function Home7() {
           </div>
         </>
       )}
-
-      {/* DOTS — MOBILE ONLY
-      {visibleCount === 1 && images.length > 0 && (
-        <div className="d-flex justify-content-center mt-2 gap-2">
-          {images.map((_, i) => (
-            <div
-              key={i}
-              onClick={() => goToSlide(i)}
-              style={{
-                width: i === startIndex ? "12px" : "10px",
-                height: i === startIndex ? "12px" : "10px",
-                borderRadius: "50%",
-                backgroundColor: i === startIndex ? "#6c757d" : "#d3d3d3",
-                cursor: "pointer",
-                transition: "0.3s",
-              }}
-            />
-          ))}
-        </div>
-      )} */}
+      
       {/* DOTS — MOBILE ONLY */}
       {visibleCount === 1 && images.length > 0 && (
         <div className="d-flex justify-content-center mt-2 gap-2">

@@ -3,7 +3,7 @@ import interior2 from '/interiors/top-interior-designers.png';
 import interior3 from '/interiors/low-cost-interiors.png';
 import interior4 from '/interiors/warranty-home-interiors.png';
 
-const Home2 = () => {
+const WhyChooseUs = () => {
   return (
     <div className="container text-center mt-5">
       <h2>Why Choose Colours Kitchen Gallery ?</h2>
@@ -35,4 +35,4 @@ const Home2 = () => {
   )
 }
 
-export default Home2;
+export default WhyChooseUs;
