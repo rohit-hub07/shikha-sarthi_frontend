@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import magazineData from "../designIdeas/data/magazineData.json";
 import './Magazine.css';
 
@@ -22,6 +23,11 @@ const Magazine = () => {
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
 
+  // Create URL-friendly slug from title
+  const createSlug = (title) => {
+    return title.toLowerCase().replace(/\s+/g, '-');
+  };
+
   const posts = magazineData[category] || [];
 
   return (
@@ -34,23 +40,25 @@ const Magazine = () => {
 
       <div className="posts-grid">
         {posts.map((post, idx) => (
-          <article key={idx} className="post-card">
-            <div className="post-image-wrapper">
-              <img
-                src={post.imageUrl}
-                alt={post.title}
-                className="post-image"
-                loading="lazy"
-              />
-            </div>
-            <div className="post-content">
-              <h2 className="post-title">{post.title}</h2>
-              <p className="post-description">{post.description}</p>
-              <time className="post-date" dateTime={post.date}>
-                | {formatDate(post.date)}
-              </time>
-            </div>
-          </article>
+          <Link className='story-link' to={`/story/?query=${createSlug(post.title)}`}>
+            <article key={idx} className="post-card">
+              <div className="post-image-wrapper">
+                <img
+                  src={post.imageUrl}
+                  alt={post.title}
+                  className="post-image"
+                  loading="lazy"
+                />
+              </div>
+              <div className="post-content">
+                <h2 className="post-title">{post.title}</h2>
+                <p className="post-description">{post.description}</p>
+                <time className="post-date" dateTime={post.date}>
+                  | {formatDate(post.date)}
+                </time>
+              </div>
+            </article>
+          </Link>
         ))}
       </div>
 
