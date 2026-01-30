@@ -95,9 +95,9 @@
       "description": "Contemporary gypsum ceiling ideas suitable for modern homes.",
       "date": "2025-01-19",
       "imageUrl": "https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=800&q=80"
-    } 
+    }
   ],
-  
+
   "home-decor": [
     {
       "title": "Modern Home Decor with Neutral Palette",
@@ -231,12 +231,12 @@
   ],
 
   "interior-advice": [
-    {
-      "title": "Interior Design Tips for Small Homes",
-      "description": "Practical advice to make small homes look spacious.",
-      "date": "2025-01-08",
-      "imageUrl": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80"
-    },
+      {
+        "title": "Interior Design Tips for Small Homes",
+        "description": "Practical advice to make small homes look spacious.",
+        "date": "2025-01-08",
+        "imageUrl": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80"
+      },
     {
       "title": "Balancing Functionality and Aesthetics",
       "description": "Tips to achieve both beauty and functionality in interiors.",
@@ -262,40 +262,39 @@
       "imageUrl": "https://images.unsplash.com/photo-1582582421976-6c4d6f7fbb4c?auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "kitchen-designs": [
+  "furniture-ideas": [
     {
-      "title": "Modern Modular Kitchen Design",
-      "description": "Sleek modular kitchen layouts with smart storage and clean finishes.",
+      "title": "Modern Sofa Design for Living Room",
+      "description": "Stylish modern sofa designs that combine comfort with contemporary aesthetics.",
       "date": "2025-01-06",
-      "imageUrl": "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80"
     },
     {
-      "title": "Small Kitchen Space Optimization Ideas",
-      "description": "Design tricks to make small kitchens functional and spacious.",
+      "title": "Space-Saving Furniture for Small Homes",
+      "description": "Smart furniture ideas designed to maximize space in compact homes.",
       "date": "2025-01-09",
-      "imageUrl": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80"
     },
     {
-      "title": "Luxury Kitchen Interior Inspiration",
-      "description": "Premium kitchen interiors with high-end materials and lighting.",
+      "title": "Wooden Furniture Design Inspiration",
+      "description": "Timeless wooden furniture designs that add warmth and elegance to interiors.",
       "date": "2025-01-12",
-      "imageUrl": "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=800&q=80"
     },
     {
-      "title": "Open Kitchen Living Room Concept",
-      "description": "Open kitchen designs that seamlessly blend with living spaces.",
+      "title": "Minimalist Furniture for Modern Homes",
+      "description": "Clean and minimal furniture designs focused on functionality and simplicity.",
       "date": "2025-01-15",
-      "imageUrl": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80"
     },
     {
-      "title": "Indian Style Kitchen Design",
-      "description": "Kitchen designs tailored for Indian cooking and storage needs.",
+      "title": "Luxury Furniture Ideas for Premium Interiors",
+      "description": "High-end furniture ideas featuring premium materials and refined finishes.",
       "date": "2025-01-18",
-      "imageUrl": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=800&q=80"
     }
   ],
-
-   "home-organisation": [
+  "home-organisation": [
     {
       "title": "Smart Home Organisation Ideas",
       "description": "Practical home organisation ideas to keep your space neat and clutter-free.",
