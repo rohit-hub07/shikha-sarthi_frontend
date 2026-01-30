@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import logo from "/colours-kitchen-logo.png";
 
@@ -66,14 +66,14 @@ const NavBar = ({ onQuoteClick }) => {
                   Home
                 </Link>
               </li>
-              <li className="nav-item dropdown d-flex align-items-center">
-                {/* TEXT → PAGE NAVIGATION */}
-                <Link className="nav-link fw-semibold" to="/">
+              {/* <li className="nav-item dropdown d-flex align-items-center"> */}
+              {/* TEXT → PAGE NAVIGATION */}
+              {/* <Link className="nav-link fw-semibold" to="/">
                   Design Ideas
-                </Link>
+                </Link> */}
 
-                {/* ARROW → DROPDOWN */}
-                <button
+              {/* ARROW → DROPDOWN */}
+              {/* <button
                   className="nav-link dropdown-toggle btn btn-link p-0 ms-1"
                   type="button"
                   data-bs-toggle="dropdown"
@@ -261,289 +261,648 @@ const NavBar = ({ onQuoteClick }) => {
                     </Link>
                   </li>
                 </ul>
+              </li> */}
+              <li className="nav-item dropdown mega-dropdown">
+                <NavLink
+                  className="nav-link fw-semibold dropdown-toggle"
+                  to="/secondFront/*"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Design Ideas
+                </NavLink>
+
+                <div className="dropdown-menu mega-menu p-4 shadow-lg">
+                  <div className="mega-grid">
+                    <NavLink
+                      to="/secondFront/modularKitchen"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Modular Kitchen Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/wardrobe"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Wardrobe Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/bathroom"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Bathroom Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/masterBedroom"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Master Bedroom Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/livingroom"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Living Room Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/poojaroom"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Pooja Room Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/tvUnit"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      TV Unit Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/falseCelling"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      False Ceiling Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/kidsBedroom"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Kids Bedroom Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/balcony"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Balcony Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/diningRoom"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Dining Room Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/foyer"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Foyer Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/homesByLivspace"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Homes by Livspace
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/homeOffice"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Home Office Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/guestBedroom"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Guest Bedroom Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/window"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Window Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/flooring"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Flooring Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/wallDecor"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Wall Decor Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/wallPaint"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Wall Paint Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/homeWallpaper"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Home Wallpaper Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/tile"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Tile Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/studyroom"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Study Room Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/kitchenSinks"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Kitchen Sinks
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/spaceSavingDesign"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Space Saving Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/door"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Door Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/staircase"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Staircase Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/crockeryUnit"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Crockery Unit Designs
+                    </NavLink>
+
+                    <NavLink
+                      to="/secondFront/homeBar"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
+                    >
+                      Home Bar Designs
+                    </NavLink>
+                  </div>
+                </div>
               </li>
-              <li className="nav-item dropdown d-flex align-items-center">
+              <li className="nav-item dropdown mega-dropdown">
                 {/* TEXT → PAGE NAVIGATION */}
-                <Link className="nav-link fw-semibold" to="/">
+                <NavLink
+                  className="nav-link fw-semibold dropdown-toggle"
+                  to="/secondFront/*"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   Magazine
-                </Link>
+                </NavLink>
 
                 {/* ARROW → DROPDOWN */}
-                <button
+                {/* <button
                   className="nav-link dropdown-toggle btn btn-link p-0 ms-1"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                />
+                /> */}
 
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link
+                <div className="dropdown-menu mega-menu p-4 shadow-lg">
+                  <div className="mega-grid">
+                    <NavLink
                       to="/secondFront/modularKitchen"
-                      className="dropdown-item"
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
                     >
                       Room Ideas
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/secondFront/bedroom">
+                    </NavLink>
+                    <li>
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/bedroom">
                       Decor & Inspiration
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link
-                      className="dropdown-item"
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
                       to="/secondFront/livingroom"
                     >
                       Ceiling Designs
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/bedroom">
                       Furniture Ideas
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/bedroom">
                       Home Decor
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/bedroom">
                       Lighting Ideas
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/bedroom">
                       Wall Design Ideas
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/bedroom">
                       Expert Advice
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/bedroom">
                       Interior Advice
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/bedroom">
                       Vastu Tips
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/bedroom">
                       Home Organisation
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/bedroom">
                       Materials Guide
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/bedroom">
                       Home Renovation Ideas
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/bedroom">
                       Commercial Interiors
-                    </Link>
+                    </NavLink>
                   </li>
-                </ul>
+                </div>
+                </div>
               </li>
-              <li className="nav-item dropdown d-flex align-items-center">
+              <li className="nav-item dropdown mega-dropdown">
                 {/* TEXT → PAGE NAVIGATION */}
-                <Link className="nav-link fw-semibold" to="/">
-                  Cities
-                </Link>
-
-                {/* ARROW → DROPDOWN */}
-                <button
-                  className="nav-link dropdown-toggle btn btn-link p-0 ms-1"
-                  type="button"
+                <NavLink
+                  className="nav-link fw-semibold dropdown-toggle"
+                  to="/secondFront/*"
+                  role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                />
-
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link to="/secondFront/saran" className="dropdown-item">
+                >
+                  Cities
+                </NavLink>
+                <div className="dropdown-menu mega-menu p-4 shadow-lg">
+                  <div className="mega-grid">
+                    <NavLink to="/secondFront/saran" className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }>
                       Balod
-                    </Link>
-                  </li>
+                    </NavLink>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/patna">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/patna">
                       Baloda Bazar
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link
-                      className="dropdown-item"
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      }
                       to="/secondFront/vijayawada"
                     >
-                      Balrampur-Ramanujganj
-                    </Link>
+                      Balrampur
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/kanpur">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/kanpur">
                       Bastar
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/goa">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/goa">
                       Bijapur
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } href="/secondFront/saran">
                       Bilaspur
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/dehradun">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/dehradun">
                       Dehradun
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/agra">
-                      Dantewada (Dakshin Bastar)
-                    </Link>
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/agra">
+                      Dantewada
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Dhamtari
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Durg
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Gariaband
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Gaurela-Pendra-Marwahi
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Janjgir-Champa
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
-                      Janjgir-Champa
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Jashpur
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
-                      Kabirdham (Kawardha)
-                    </Link>
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
+                      Kabirdham
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Kanker
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Kondagaon
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Khairagarh-Chhuikhadan-Gandai
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Korba
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Koriya
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Mahasamund
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Manendragarh-Chirmiri-Bharatpur
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Mohla-Manpur-Ambagarh Chowki
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Mungeli
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Narayanpur
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Raigarh
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Raipur
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Rajnandgaon
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Sarangarh-Bilaigarh
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Sakti
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Sukma
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Surajpur
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/secondFront/surat">
+                    <NavLink className={({ isActive }) =>
+                        isActive ? "mega-link mega-active" : "mega-link"
+                      } to="/secondFront/surat">
                       Surguja
-                    </Link>
+                    </NavLink>
                   </li>
-                </ul>
+                </div>
+              </div>
               </li>
 
               <li className="nav-item">
@@ -571,7 +930,10 @@ const NavBar = ({ onQuoteClick }) => {
                   </li>
 
                   <li>
-                    <Link className="dropdown-item" to="secondFront/diningTables">
+                    <Link
+                      className="dropdown-item"
+                      to="secondFront/diningTables"
+                    >
                       Dining Tables & Sets
                     </Link>
                   </li>

@@ -14,13 +14,6 @@
   display: block;
 }
 
-/* Fix navbar wrap at 320px */
-/* @media (max-width: 360px) {
-  .navbar-brand {
-    font-size: 24px !important;
-    white-space: nowrap;
-  }
-} */
 .dropdown-submenu {
   position: relative;
 }
@@ -30,10 +23,6 @@
   left: 100%;
   margin-left: 0.1rem;
   display: none;
-}
-
-.dropdown-submenu:hover > .dropdown-menu {
-  display: block;
 }
 
 /* Prevent closing when clicking submenu button */
@@ -78,4 +67,60 @@
   }
 }
 
+/* ===================== MEGA MENU ===================== */
+
+.mega-dropdown .dropdown-menu {
+  width: 650px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* 3 columns grid */
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px 10px;
+}
+
+/* Mega dropdown links */
+.mega-link {
+  display: block;
+  text-decoration: none;
+  color: #000 !important;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.mega-link:hover {
+  background: rgba(13, 110, 253, 0.12);
+  color: #0d6efd !important;
+}
+
+/* Active (after click) effect */
+.mega-active {
+  background: rgba(13, 110, 253, 0.2);
+  color: red !important;
+  font-weight: 600;
+}
+
+
+/* Responsive for mobile */
+@media (max-width: 992px) {
+  .mega-dropdown .dropdown-menu {
+    width: 100%;
+  }
+
+  .mega-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mega-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
 
