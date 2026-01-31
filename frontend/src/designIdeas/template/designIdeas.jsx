@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import pageConfig from "../data/designIdeas.json";
 import { fetchData } from "../api/api";
@@ -9,6 +10,7 @@ const Template = ({ pageKey }) => {
   const config = pageConfig[pageKey];
   const [data, setData] = useState([]);
   const [showFullDesc, setShowFullDesc] = useState(false);
+  const navigate = useNavigate();
 
   const DESC_LIMIT = 160;
 
@@ -25,6 +27,14 @@ const Template = ({ pageKey }) => {
     : config.img
       ? 1
       : 0;
+
+  const handleClick = () => {
+    navigate("/designDetails");
+  };
+
+  const handleQuote = (item) => {
+    navigate("/quote", { state: item });
+  };
 
   return (
     <div className="container text-start py-4 mt-3">
@@ -59,7 +69,11 @@ const Template = ({ pageKey }) => {
         {Array.isArray(config.images) &&
           config.images.map((item, index) => (
             <div className="col-md-4" key={index}>
-              <div className="card h-100 shadow-sm">
+              <div
+                className="card h-100 shadow-sm"
+                onClick={() => handleClick(item)}
+                style={{ cursor: "pointer" }}
+              >
                 {/* IMAGE */}
                 <img
                   src={item.src}
@@ -89,7 +103,11 @@ const Template = ({ pageKey }) => {
 
                   <button
                     className="btn btn-danger btn-sm mb-2 w-50"
-                    onClick={() => handleQuote(item)}
+                    // onClick={() => handleQuote(item)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleQuote(item);
+                    }}
                   >
                     Get Quote
                   </button>
