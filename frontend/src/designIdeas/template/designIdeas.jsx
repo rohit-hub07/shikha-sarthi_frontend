@@ -70,7 +70,7 @@ const Template = ({ pageKey }) => {
           config.images.map((item, index) => (
             <div className="col-md-4" key={index}>
               <div
-                className="card h-100 shadow-sm"
+                className="card h-100 shadow-sm floating-card"
                 onClick={() => handleClick(item)}
                 style={{ cursor: "pointer" }}
               >
