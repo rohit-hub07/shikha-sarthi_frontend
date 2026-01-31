@@ -1,6 +1,6 @@
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
-import logo from "/colours-kitchen-logo.png";
+import logo from "/Colours_Kitchen_Logo.png";
 
 import "./image.css";
 
