@@ -77,7 +77,7 @@ function App() {
           <Route path="/upload" element={<Upload />} />
           <Route path="/" element={<Home />} />
           <Route path="/secondFront/:designType" element={<SecondFront />} />
-          <Route path="/designDetails" element={<DesignDetails />} />
+          <Route path="/designDetails/:pageKey" element={<DesignDetails />} />
           {/* <Route path="/login" element={<Login onLogin={(u) => setUser(u)} />} />
           <Route path="/register" element={<Register onRegister={(u) => setUser(u)} />} /> */}
         </Routes>

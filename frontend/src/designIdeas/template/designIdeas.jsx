@@ -29,7 +29,7 @@ const Template = ({ pageKey }) => {
       : 0;
 
   const handleClick = () => {
-    navigate("/designDetails");
+    navigate(`/designDetails/${pageKey}`);
   };
 
   const handleQuote = (item) => {
