@@ -9,11 +9,12 @@ import { getUser, clearAuth, getToken } from "./lib/auth";
 
 import Home from "./components/home";
 import SecondFront from "./components/secondFront";
-import NavBar from "./components/navBar.jsx";
+import NavBar from "./components/Navbar.jsx";
 import Footer from "./components/footer";
 import ConsultationForm from "./components/consultationForm.jsx";
 import Magazine from "./components/Magazine.jsx";
 import Story from "./components/Story.jsx";
+import MagazineLandingPage from "./components/MagazineLandingPage.jsx";
 
 const API =
   import.meta.env.VITE_API_URL || "https://react-shiksak-sarthi-d.vercel.app";
@@ -81,6 +82,9 @@ function App() {
           <Route path="/magazine" element={<Magazine />} />
 
           <Route path="/story" element={<Story />} />
+
+          <Route path="/abode" element={<MagazineLandingPage />} />
+          
           {/* <Route path="/login" element={<Login onLogin={(u) => setUser(u)} />} />
           <Route path="/register" element={<Register onRegister={(u) => setUser(u)} />} /> */}
         </Routes>
