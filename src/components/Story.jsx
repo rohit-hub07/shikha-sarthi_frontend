@@ -36,13 +36,29 @@ const Story = () => {
           </time>
         </header>
 
-        {/* Featured Image */}
-        <div style={styles.imageContainer}>
-          <img
-            src={data.imageUrl}
-            alt={data.title}
-            style={styles.image}
-          />
+        {/* Featured Images */}
+        <div style={styles.imageGrid}>
+          <div style={styles.imageContainer}>
+            <img
+              src={data.imageUrl}
+              alt={`${data.title} - 1`}
+              style={styles.image}
+            />
+          </div>
+          <div style={styles.imageContainer}>
+            <img
+              src={data.imageUrl}
+              alt={`${data.title} - 2`}
+              style={styles.image}
+            />
+          </div>
+          <div style={styles.imageContainer}>
+            <img
+              src={data.imageUrl}
+              alt={`${data.title} - 3`}
+              style={styles.image}
+            />
+          </div>
         </div>
 
         {/* Story Content */}
@@ -58,11 +74,11 @@ const styles = {
   container: {
     minHeight: '100vh',
     backgroundColor: '#f8f9fa',
-    padding: '2rem 1rem',
+    padding: '1rem 0',
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
   },
   article: {
-    maxWidth: '800px',
+    maxWidth: '1200px',
     margin: '0 auto',
     backgroundColor: '#ffffff',
     borderRadius: '12px',
@@ -72,8 +88,7 @@ const styles = {
   },
   header: {
     padding: '2.5rem 2rem 2rem',
-    textAlign: 'center',
-    borderBottom: '1px solid #e9ecef'
+    textAlign: 'center'
   },
   categoryBadge: {
     display: 'inline-block',
@@ -101,11 +116,28 @@ const styles = {
     color: '#6c757d',
     fontStyle: 'italic'
   },
+  imageGrid: {
+    position: 'relative',
+    width: '100vw',
+    marginLeft: 'calc(-50vw + 50%)',
+    padding: '4rem 5%',
+    backgroundColor: '#f5f5f5',
+    backdropFilter: 'blur(10px)',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gap: '2rem',
+    justifyItems: 'center',
+    alignItems: 'center'
+  },
   imageContainer: {
     width: '100%',
+    maxWidth: '450px',
     height: '500px',
     overflow: 'hidden',
-    backgroundColor: '#e9ecef'
+    backgroundColor: '#ffffff',
+    borderRadius: '0',
+    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease'
   },
   image: {
     width: '100%',
