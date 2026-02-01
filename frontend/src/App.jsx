@@ -15,6 +15,8 @@ import ConsultationForm from "./components/consultationForm.jsx";
 import Magazine from "./components/Magazine.jsx";
 import Story from "./components/Story.jsx";
 import MagazineLandingPage from "./components/MagazineLandingPage.jsx";
+import ProjectPage from "./components/ProjectPage.jsx";
+import ProjectDetailPage from "./components/ProjectDetailPage.jsx";
 
 const API =
   import.meta.env.VITE_API_URL || "https://react-shiksak-sarthi-d.vercel.app";
@@ -85,6 +87,9 @@ function App() {
 
           <Route path="/abode" element={<MagazineLandingPage />} />
           
+          <Route path="/project" element={<ProjectPage />} />
+
+          <Route path="/project-details/:id" element={<ProjectDetailPage />} />
           {/* <Route path="/login" element={<Login onLogin={(u) => setUser(u)} />} />
           <Route path="/register" element={<Register onRegister={(u) => setUser(u)} />} /> */}
         </Routes>
