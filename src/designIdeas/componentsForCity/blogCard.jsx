@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const BlogCard = ({ blog }) => {
   return (
-    <Link
+    <Link 
       to={blog.link}
       className="text-decoration-none text-dark"
     >

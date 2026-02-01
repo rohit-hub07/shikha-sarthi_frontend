@@ -72,10 +72,12 @@
   overflow: hidden;
   transition: transform 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .post-card:hover {
   transform: translateY(-8px);
+  text-decoration: none;
 }
 
 .post-image-wrapper {
@@ -94,6 +96,7 @@
 
 .post-card:hover .post-image {
   transform: scale(1.1);
+  text-decoration: none;
 }
 
 .post-content {
@@ -122,7 +125,7 @@
 }
 
 .story-link{
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .post-date {
   font-size: 0.875rem;

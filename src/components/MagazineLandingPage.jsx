@@ -7,22 +7,22 @@ const MagazineLandingPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   // Helper function to create category slug for magazine routes
-  const getCategorySlug = (category) => {
-    const categoryMap = {
-      'Interior Design': 'room-ideas',
-      'Kitchen': 'home-decor',
-      'Bedroom': 'room-ideas',
-      'Furniture': 'furniture-ideas',
-      'Technology': 'expert-advice',
-      'Outdoor': 'home-decor'
-    };
-    return categoryMap[category] || 'room-ideas';
-  };
+  // const getCategorySlug = (category) => {
+  //   const categoryMap = {
+  //     'Interior Design': 'room-ideas',
+  //     'Kitchen': 'home-decor',
+  //     'Bedroom': 'room-ideas',
+  //     'Furniture': 'furniture-ideas',
+  //     'Technology': 'expert-advice',
+  //     'Outdoor': 'home-decor'
+  //   };
+  //   return categoryMap[category] || 'room-ideas';
+  // };
 
   // Helper function to create slug from title
-  const createSlug = (title) => {
-    return title.toLowerCase().replace(/\s+/g, '-');
-  };
+  // const createSlug = (title) => {
+  //   return title.toLowerCase().replace(/\s+/g, '-');
+  // };
 
   // Get data from JSON
   const featuredArticles = magazineLandingData.featuredArticles;
