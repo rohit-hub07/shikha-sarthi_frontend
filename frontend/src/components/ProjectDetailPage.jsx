@@ -11,11 +11,11 @@ const getHighQualityImageUrl = (url, width = 1920, height = 1080) => {
   return `${baseUrl}?w=${width}&h=${height}&fit=crop&q=90`;
 };
 
-// Helper function to get thumbnail URL (smaller size for gallery)
-const getThumbnailUrl = (url, width = 400, height = 300) => {
+// Helper function to get thumbnail URL (higher quality for gallery preview)
+const getThumbnailUrl = (url, width = 800, height = 600) => {
   if (!url) return url;
   const baseUrl = url.split('?')[0];
-  return `${baseUrl}?w=${width}&h=${height}&fit=crop&q=80`;
+  return `${baseUrl}?w=${width}&h=${height}&fit=crop&q=85`;
 };
 
 const ProjectDetailPage = () => {
@@ -169,7 +169,7 @@ const ProjectDetailPage = () => {
                 </button>
                 <div className="carousel-track">
                   <img
-                    src={getThumbnailUrl(post.images[currentImageIndex], 600, 400)}
+                    src={getThumbnailUrl(post.images[currentImageIndex], 1200, 800)}
                     alt={`Design highlight ${currentImageIndex + 1}`}
                     className="carousel-image"
                     onError={(e) => {
