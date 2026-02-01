@@ -218,35 +218,55 @@
 .carousel-container {
   position: relative;
   margin-top: 24px;
-  min-height: 300px;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-track {
+  width: 100%;
+  text-align: center;
   display: flex;
-  gap: 16px;
-  overflow-x: auto;
+  overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  cursor: grab;
+  -ms-overflow-style: none;
   padding: 4px;
-  min-height: 280px;
+  min-height: 430px;
 }
 
 .carousel-track::-webkit-scrollbar {
   display: none;
 }
 
-.carousel-track:active {
-  cursor: grabbing;
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .carousel-item {
-  flex: 0 0 350px;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 600px;
+  margin-right: 20px;
+  height: 450px;
   scroll-snap-align: start;
   border-radius: 12px;
   overflow: hidden;
+  background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition:
     transform 0.3s ease,
@@ -261,10 +281,9 @@
 
 .carousel-item img {
   width: 100%;
-  height: 250px;
+  height: 390px;
   object-fit: cover;
   display: block;
-  pointer-events: none;
 }
 
 .carousel-caption {
@@ -503,16 +522,20 @@
 
 .lightbox-content {
   position: relative;
-  width: 90%;
-  height: 90%;
+  width: 95%;
+  height: 95%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .lightbox-image {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 95%;
+  max-height: 95%;
+  min-width: 60%;
+  min-height: 60%;
+  width: auto;
+  height: auto;
   object-fit: contain;
   border-radius: 8px;
   animation: zoomIn 0.3s ease;
@@ -531,7 +554,7 @@
 
 .lightbox-close {
   position: absolute;
-  top: -50px;
+  top: -20px;
   right: 0;
   background: transparent;
   border: none;

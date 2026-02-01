@@ -3,6 +3,21 @@ import projectDetails from "../designIdeas/data/projectDetails.json";
 import { useParams } from 'react-router-dom';
 import './ProjectDetailPage.css';
 
+// Helper function to get high-quality Unsplash image URL
+const getHighQualityImageUrl = (url, width = 1920, height = 1080) => {
+  if (!url) return url;
+  // Remove existing size parameters and add high-quality ones
+  const baseUrl = url.split('?')[0];
+  return `${baseUrl}?w=${width}&h=${height}&fit=crop&q=90`;
+};
+
+// Helper function to get thumbnail URL (higher quality for gallery preview)
+const getThumbnailUrl = (url, width = 800, height = 600) => {
+  if (!url) return url;
+  const baseUrl = url.split('?')[0];
+  return `${baseUrl}?w=${width}&h=${height}&fit=crop&q=85`;
+};
+
 const ProjectDetailPage = () => {
   const { id } = useParams();
   const post = projectDetails.find((p) => p.id == id);
@@ -18,9 +33,6 @@ const ProjectDetailPage = () => {
   });
 
   const carouselRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
 
   // Lightbox handlers
   const openLightbox = (index) => {
@@ -58,41 +70,6 @@ const ProjectDetailPage = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [lightboxOpen, currentImageIndex]);
 
-  // Carousel drag handlers
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - carouselRef.current.offsetLeft);
-    setScrollLeft(carouselRef.current.scrollLeft);
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - carouselRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    carouselRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseLeave = () => {
-    setIsDragging(false);
-  };
-
-  // Touch handlers for mobile
-  const handleTouchStart = (e) => {
-    setStartX(e.touches[0].pageX - carouselRef.current.offsetLeft);
-    setScrollLeft(carouselRef.current.scrollLeft);
-  };
-
-  const handleTouchMove = (e) => {
-    const x = e.touches[0].pageX - carouselRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    carouselRef.current.scrollLeft = scrollLeft - walk;
-  };
-
   // Carousel scroll buttons
   const scrollCarousel = (direction) => {
     const scrollAmount = 300;
@@ -124,6 +101,16 @@ const ProjectDetailPage = () => {
     return <div className="project-detail-error">Project not found</div>;
   }
 
+  console.log('Post data:', post);
+  console.log('Images array:', post.images);
+
+  useEffect(() => {
+    if (carouselRef.current) {
+      console.log('Carousel Track Dimensions:', carouselRef.current.getBoundingClientRect());
+      console.log('Carousel Track Content:', carouselRef.current.innerHTML);
+    }
+  }, []);
+
   return (
     <div className="project-detail-page">
       {/* Image Gallery */}
@@ -135,7 +122,7 @@ const ProjectDetailPage = () => {
               className={`gallery-item ${index === 0 ? 'main-image' : ''}`}
               onClick={() => openLightbox(index)}
             >
-              <img src={image} alt={`${post.title} - Image ${index + 1}`} />
+              <img src={getThumbnailUrl(image)} alt={`${post.title} - Image ${index + 1}`} />
               <div className="image-overlay">
                 <span className="view-text">Click to view</span>
               </div>
@@ -172,51 +159,28 @@ const ProjectDetailPage = () => {
           {post.images && post.images.length > 0 && (
             <section className="design-highlights">
               <h2 className="section-title">Design Highlights</h2>
-
               <div className="carousel-container">
                 <button
                   className="carousel-nav prev"
-                  onClick={() => scrollCarousel('left')}
+                  onClick={() => setCurrentImageIndex((prev) => (prev === 0 ? post.images.length - 1 : prev - 1))}
                   aria-label="Previous"
                 >
                   ‹
                 </button>
-
-                <div
-                  className="carousel-track"
-                  ref={carouselRef}
-                  onMouseDown={handleMouseDown}
-                  onMouseMove={handleMouseMove}
-                  onMouseUp={handleMouseUp}
-                  onMouseLeave={handleMouseLeave}
-                  onTouchStart={handleTouchStart}
-                  onTouchMove={handleTouchMove}
-                >
-                  {post.images.map((image, index) => {
-
-                    console.log("images inside of design highlights: ",image)
-                    return <div key={index} className="carousel-item">
-                      <img
-                        src={image}
-                        alt={`Design highlight ${index + 1}`}
-                        loading="lazy"
-                        onError={(e) => {
-                          console.error('Image failed to load:', image);
-                          e.target.src = 'https://via.placeholder.com/350x250?text=Image+Not+Available';
-                        }}
-                      />
-                      <div className="carousel-caption">
-                        <p>Design Element {index + 1}</p>
-                      </div>
-                    </div>
-                  }
-                    
-                  )}
+                <div className="carousel-track">
+                  <img
+                    src={getThumbnailUrl(post.images[currentImageIndex], 1200, 800)}
+                    alt={`Design highlight ${currentImageIndex + 1}`}
+                    className="carousel-image"
+                    onError={(e) => {
+                      console.error('Image failed to load:', post.images[currentImageIndex]);
+                      e.target.src = 'https://via.placeholder.com/350x250?text=Image+Not+Available';
+                    }}
+                  />
                 </div>
-
                 <button
                   className="carousel-nav next"
-                  onClick={() => scrollCarousel('right')}
+                  onClick={() => setCurrentImageIndex((prev) => (prev === post.images.length - 1 ? 0 : prev + 1))}
                   aria-label="Next"
                 >
                   ›
@@ -328,7 +292,7 @@ const ProjectDetailPage = () => {
             </button>
 
             <img
-              src={post.images[currentImageIndex]}
+              src={getHighQualityImageUrl(post.images[currentImageIndex])}
               alt={`${post.title} - Image ${currentImageIndex + 1}`}
               className="lightbox-image"
             />
