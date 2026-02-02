@@ -76,11 +76,32 @@
   margin-top: 10px;
 }
 
+.mega-dropdown-two .dropdown-menu {
+  width: 550px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.mega-dropdown-one .dropdown-menu {
+  width: 200px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
 /* 3 columns grid */
 .mega-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4px 10px;
+  gap: 0 0;
+}
+
+/* 2 columns grid */
+.mega-grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 0;
 }
 
 /* Mega dropdown links */
