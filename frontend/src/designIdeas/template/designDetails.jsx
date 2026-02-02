@@ -54,7 +54,13 @@ const DesignDetails = () => {
             }}
           >
             {/* PREVIOUS */}
-            <div className="d-flex align-items-center gap-2">
+            {/* <div className="d-flex align-items-center gap-2"> */}
+            <div
+              className="d-flex align-items-center gap-2"
+              role="button"
+              style={{ cursor: "pointer" }}
+              onClick={() => navigate(`/design/${prevKey}`)}
+            >
               <button
                 onClick={() => navigate(`/design/${prevKey}`)}
                 className="btn btn-light shadow-sm rounded-circle d-flex align-items-center justify-content-center"
@@ -80,7 +86,13 @@ const DesignDetails = () => {
             />
 
             {/* NEXT */}
-            <div className="d-flex align-items-center gap-2">
+            {/* <div className="d-flex align-items-center gap-2"> */}
+            <div
+              className="d-flex align-items-center gap-2"
+              role="button"
+              style={{ cursor: "pointer" }}
+              onClick={() => navigate(`/design/${nextKey}`)}
+            >
               <div className="text-end">
                 <small className="text-muted d-block">Next Project</small>
                 <b style={{ fontSize: "14px" }}>{nextConfig?.title}</b>
