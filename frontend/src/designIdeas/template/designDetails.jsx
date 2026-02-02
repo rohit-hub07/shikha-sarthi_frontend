@@ -1,26 +1,90 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import pageConfig from "../data/designIdeas.json";
 
 const DesignDetails = () => {
   const { pageKey } = useParams();
+  const navigate = useNavigate();
+
   const config = pageConfig[pageKey];
 
   if (!config) return <h2 className="text-center mt-5">Page not found</h2>;
 
   const item = config.images?.[0];
 
+  // All keys (for prev/next navigation)
+  const keys = Object.keys(pageConfig);
+  const currentIndex = keys.indexOf(pageKey);
+
+  const prevKey = keys[(currentIndex - 1 + keys.length) % keys.length];
+  const nextKey = keys[(currentIndex + 1) % keys.length];
+
+  const prevConfig = pageConfig[prevKey];
+  const nextConfig = pageConfig[nextKey];
+
   return (
     <div className="container-fluid py-3">
       <div className="row g-4">
         {/* LEFT IMAGE */}
         <div className="col-lg-8">
-          <div className="rounded-4 overflow-hidden bg-light">
+          <div
+            className="rounded-4 overflow-hidden bg-light d-flex justify-content-center align-items-center"
+            style={{ height: "60vh" }}
+          >
             <img
               src={item?.src}
               alt={config.title}
-              className="w-100"
-              style={{ height: "75vh", objectFit: "cover" }}
+              style={{
+                width: "90%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
             />
+          </div>
+
+          {/* BUTTONS UNDER IMAGE */}
+          <div className="d-flex justify-content-between align-items-center mt-3 px-2 border-top pt-3">
+            {/* PREVIOUS */}
+            <div className="d-flex align-items-center gap-2">
+              <button
+                onClick={() => navigate(`/design/${prevKey}`)}
+                className="btn btn-light shadow-sm rounded-circle d-flex align-items-center justify-content-center"
+                style={{ width: "42px", height: "42px" }}
+              >
+                ❮
+              </button>
+
+              <div className="text-start">
+                <small className="text-muted d-block">Previous Project</small>
+                <b style={{ fontSize: "14px" }}>{prevConfig?.title}</b>
+              </div>
+            </div>
+
+            {/* CENTER LINE */}
+            <div
+              style={{
+                width: "1px",
+                height: "45px",
+                backgroundColor: "#ddd",
+                margin: "0 20px",
+              }}
+            />
+
+            {/* NEXT */}
+            <div className="d-flex align-items-center gap-2">
+              <div className="text-end">
+                <small className="text-muted d-block">Next Project</small>
+                <b style={{ fontSize: "14px" }}>{nextConfig?.title}</b>
+              </div>
+
+              <button
+                onClick={() => navigate(`/design/${nextKey}`)}
+                className="btn btn-light shadow-sm rounded-circle d-flex align-items-center justify-content-center"
+                style={{ width: "42px", height: "42px" }}
+              >
+                ❯
+              </button>
+            </div>
           </div>
         </div>
 
