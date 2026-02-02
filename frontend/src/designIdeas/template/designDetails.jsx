@@ -27,8 +27,12 @@ const DesignDetails = () => {
         {/* LEFT IMAGE */}
         <div className="col-lg-8">
           <div
-            className="rounded-4 overflow-hidden bg-light d-flex justify-content-center align-items-center"
-            style={{ height: "60vh" }}
+            className="rounded-4 overflow-hidden d-flex justify-content-center align-items-center"
+            style={{
+              height: "60vh",
+              background: "#f5f5f5", // light grey like Livspace
+              padding: "25px",
+            }}
           >
             <img
               src={item?.src}
@@ -36,14 +40,19 @@ const DesignDetails = () => {
               style={{
                 width: "90%",
                 height: "100%",
-                objectFit: "cover",
+                objectFit: "contain", // show full image nicely
                 objectPosition: "center",
               }}
             />
           </div>
-
           {/* BUTTONS UNDER IMAGE */}
-          <div className="d-flex justify-content-between align-items-center mt-3 px-2 border-top pt-3">
+          <div
+            className="d-flex justify-content-between align-items-center mt-3 px-2 border-top pt-3"
+            style={{
+              background: "#fff", // white like Livspace
+              paddingBottom: "12px",
+            }}
+          >
             {/* PREVIOUS */}
             <div className="d-flex align-items-center gap-2">
               <button
@@ -92,7 +101,12 @@ const DesignDetails = () => {
         <div className="col-lg-4">
           <div
             className="ps-lg-3 d-flex flex-column"
-            style={{ height: "75vh" }}
+            style={{
+              height: "75vh",
+              background: "#fff",
+              padding: "15px",
+              borderRadius: "12px",
+            }}
           >
             {/* Scrollable Content */}
             <div style={{ overflowY: "auto", paddingRight: "6px" }}>
