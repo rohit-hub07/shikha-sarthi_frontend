@@ -53,7 +53,7 @@ const SecondFront = () => {
 
   const furnitureMap = {
     sofas: "sofas",
-    diningTables:"diningTable",
+    diningTable:"diningTable",
     tables: "tables",
     occationalSetting: "occationalSetting"
   }
@@ -74,7 +74,7 @@ const SecondFront = () => {
 
   // FURNITURE PAGE
   if (furnitureKey) {
-    return <Furniture cityKey={furnitureKey} />;
+    return <Furniture furnitureKey={furnitureKey} />;
   }
 
   // INVALID ROUTE

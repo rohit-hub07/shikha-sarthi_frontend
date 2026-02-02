@@ -1,26 +1,42 @@
 {
-    "sofas" : {
+    "sofas": {
         "id": 1,
-        "name": "Modern Sofa",
-        "description": "A sleek and comfortable modern sofa perfect for any living room.",
         "price": 799.99,
-        "image": "/furniture/sofa1.jpg"
+        "name": "Modern Sofa",
+        "images": [
+            {
+                "src": "/furniture/sofa1.jpg",
+                "desc": "A sleek and comfortable modern sofa perfect for any living room."
+            },
+            {
+                "src": "/furniture/sofa1.jpg",
+                "desc": "A sleek and comfortable modern sofa perfect for any living room."
+            },
+            {
+                "src": "/furniture/sofa1.jpg",
+                "desc": "A sleek and comfortable modern sofa perfect for any living room."
+            },
+            {
+                "src": "/furniture/sofa2.jpg",
+                "desc": "A sturdy wooden dining table that can seat up to six people."
+            }
+        ]
     },
-    "diningTable" : {
+    "diningTable": {
         "id": 2,
         "name": "Wooden Dining Table",
         "description": "A sturdy wooden dining table that can seat up to six people.",
         "price": 499.99,
         "image": "/furniture/sofa2.jpg"
     },
-    "tables" : {
+    "tables": {
         "id": 3,
         "name": "Modern Sofa",
         "description": "A sleek and comfortable modern sofa perfect for any living room.",
         "price": 799.99,
         "image": "/furniture/sofa1.jpg"
     },
-    "occationalSetting" : {
+    "occationalSetting": {
         "id": 4,
         "name": "Wooden Dining Table",
         "description": "A sturdy wooden dining table that can seat up to six people.",
